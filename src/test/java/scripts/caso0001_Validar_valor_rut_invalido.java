@@ -3,6 +3,9 @@ package scripts;
 import java.awt.RenderingHints.Key;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -28,7 +31,7 @@ public class caso0001_Validar_valor_rut_invalido {
 	
 	boolean continuar = true;
 	
-	@Test (priority = 0)
+	@BeforeTest
 	public void ejecutarBrowser() {
 		tools = new tools();
 		try {
@@ -49,7 +52,7 @@ public class caso0001_Validar_valor_rut_invalido {
 		
 	}
 	
-	@Test (priority = 1)
+	@Test (priority = 0)
 	public void ingresarRutInvalido() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
@@ -70,7 +73,7 @@ public class caso0001_Validar_valor_rut_invalido {
 		
 	}
 	
-	@Test (priority = 2)
+	@Test (priority = 1)
 	public void cargarEvidencias() {
 		try {
 			
@@ -101,7 +104,7 @@ public class caso0001_Validar_valor_rut_invalido {
 		
 	}
 	
-	@Test (priority = 3)
+	@AfterTest
 	public void cerrarBrowser() {
 		try {
 			
