@@ -18,7 +18,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0030_Cambiar_estado_ready {
+public class caso0093_ {
 
 	tools tools;
 	pageIndex objIndex;
@@ -27,10 +27,10 @@ public class caso0030_Cambiar_estado_ready {
 	
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0030_Cambiar_estado_ready";
+	String _class = "caso0075_Reenvio_sms_durante_llamada";
 	String _method = "";
 	
-	String Caso = "caso0030_Cambiar_estado_ready";
+	String Caso = "caso0075_Reenvio_sms_durante_llamada";
 	
 	boolean continuar = true;
 	
@@ -112,7 +112,8 @@ public class caso0030_Cambiar_estado_ready {
 			System.out.println("Se inicia llamador");
 			objDashboard.btnIniciarLlamador.click();
 			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
-			Thread.sleep(100);
+			Thread.sleep(7000);
+			tools.screenshot("scripts", Caso , "Llamada Activa");
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -124,35 +125,23 @@ public class caso0030_Cambiar_estado_ready {
 	}
 	
 	@Test (priority = 4)
-	public void cambioEstadoAlmuerzo() {
+	public void enviarSMS() {
 		objCaller = new pageCaller(tools.getDriver());
 		try {
-			System.out.println("Menu de Estados del Ejecutivo");
-			Thread.sleep(300);
-			tools.screenshot("scripts", Caso , "Imagen del Llamador Activo");
+			System.out.println("Se envia SMS");
 			Thread.sleep(200);
-			System.out.println("Se selecciona el estado Descanso");
-			objCaller.btnDescanso.click();
-			tools.screenshot("scripts", Caso , "Ejecutivo en estado Descanso");
-			Thread.sleep(1500);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 4)
-	public void cambioEstadoReady() {
-		objCaller = new pageCaller(tools.getDriver());
-		try {
-			System.out.println("Se actualiza el estado a Ready");
-			objCaller.btnReady.click();
-			tools.screenshot("scripts", Caso , "Ejecutivo en estado Ready y se inicia el llamador");
-			Thread.sleep(4000);
+			objCaller.bntEnviarLinkSMS.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Enviar Link por SMS");
+			Thread.sleep(200);
+			objCaller.btnConfirmarEnvio_001.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se confirma y envia el SMS");
+			Thread.sleep(3000);
+			System.out.println("Se cancela la llamada");
+			Thread.sleep(300);
+			tools.screenshot("scripts", Caso , "Pantalla despues del envio de SMS");
+			Thread.sleep(2000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -164,6 +153,33 @@ public class caso0030_Cambiar_estado_ready {
 	}
 	
 	@Test (priority = 5)
+	public void reenviarSMS() {
+		try {
+			System.out.println("Se reenvia SMS");
+			Thread.sleep(200);
+			objCaller.btnReEnviarLinkSMS.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Reenviar Link por SMS");
+			Thread.sleep(200);
+			objCaller.btnConfirmarLinkSMS_002.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se confirma y se reenvia el SMS");
+			Thread.sleep(3000);
+			System.out.println("Se cancela la llamada");
+			Thread.sleep(300);
+			tools.screenshot("scripts", Caso , "Pantalla despues del reenvio de SMS");
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	
+	@Test (priority = 6)
 	public void cancelarLlamada() {
 		try {
 			tools.screenshot("scripts", Caso , "Llamada Activa");
@@ -189,7 +205,7 @@ public class caso0030_Cambiar_estado_ready {
 	}
 	
 	
-	@Test (priority = 6)
+	@Test (priority = 7)
 	public void cerrarSesion() {
 		try {
 			System.out.println("Se inicia el cierre de sesión");
@@ -214,7 +230,7 @@ public class caso0030_Cambiar_estado_ready {
 	}
 	
 	
-	@Test (priority = 7)
+	@Test (priority = 8)
 	public void cargarEvidencias() {
 		try {
 			
