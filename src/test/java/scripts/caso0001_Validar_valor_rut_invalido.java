@@ -86,7 +86,7 @@ public class caso0001_Validar_valor_rut_invalido {
 					" git commit -m \"all\" ;" +
 					" git fetch ; " +
 					" git pull --rebase origin master ; " +
-					" git commit -m \"Test\" ; " +
+					" git commit -m \"AutoTest\" ; " +
 					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
 					" git push  ; " +
 					" git push origin master ; " +
