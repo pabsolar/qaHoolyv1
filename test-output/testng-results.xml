@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13404" started-at="2019-08-14T16:58:24Z" finished-at="2019-08-14T16:58:38Z">
+  <suite name="Default suite" duration-ms="15411" started-at="2019-08-14T17:53:14Z" finished-at="2019-08-14T17:53:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13404" started-at="2019-08-14T16:58:24Z" finished-at="2019-08-14T16:58:38Z">
+    <test name="Default test" duration-ms="15411" started-at="2019-08-14T17:53:14Z" finished-at="2019-08-14T17:53:29Z">
       <class name="scripts.caso0001_Validar_valor_rut_invalido">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4786" started-at="2019-08-14T12:58:24Z" finished-at="2019-08-14T12:58:29Z">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="6795" started-at="2019-08-14T13:53:14Z" finished-at="2019-08-14T13:53:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="1796" started-at="2019-08-14T12:58:29Z" finished-at="2019-08-14T12:58:31Z">
+        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="1806" started-at="2019-08-14T13:53:21Z" finished-at="2019-08-14T13:53:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarRutInvalido -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cargarEvidencias" duration-ms="3008" started-at="2019-08-14T12:58:31Z" finished-at="2019-08-14T12:58:34Z">
+        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cargarEvidencias" duration-ms="3006" started-at="2019-08-14T13:53:22Z" finished-at="2019-08-14T13:53:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3799" started-at="2019-08-14T12:58:34Z" finished-at="2019-08-14T12:58:38Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3791" started-at="2019-08-14T13:53:25Z" finished-at="2019-08-14T13:53:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
