@@ -1,95 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="65410" started-at="2019-08-14T15:12:15Z" finished-at="2019-08-14T15:13:20Z">
+  <suite name="Default suite" duration-ms="13404" started-at="2019-08-14T16:58:24Z" finished-at="2019-08-14T16:58:38Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="65410" started-at="2019-08-14T15:12:15Z" finished-at="2019-08-14T15:13:20Z">
-      <class name="scripts.caso0004_Rut_no_registrado_Cognito">
-        <test-method status="PASS" signature="ingresarRUTnoCognito()[pri:1, instance:scripts.caso0004_Rut_no_registrado_Cognito@28f67ac7]" name="ingresarRUTnoCognito" duration-ms="2648" started-at="2019-08-14T11:12:55Z" finished-at="2019-08-14T11:12:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarRUTnoCognito -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0004_Rut_no_registrado_Cognito@28f67ac7]" name="ingresarPASS" duration-ms="5478" started-at="2019-08-14T11:12:58Z" finished-at="2019-08-14T11:13:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:3, instance:scripts.caso0004_Rut_no_registrado_Cognito@28f67ac7]" name="cargarEvidencias" duration-ms="1002" started-at="2019-08-14T11:13:03Z" finished-at="2019-08-14T11:13:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cargarEvidencias -->
-      </class> <!-- scripts.caso0004_Rut_no_registrado_Cognito -->
-      <class name="scripts.caso0002_Rut_no_registrado_SalesForce">
-        <test-method status="PASS" signature="ingresarRUTnoSalesForce()[pri:1, instance:scripts.caso0002_Rut_no_registrado_SalesForce@6adca536]" name="ingresarRUTnoSalesForce" duration-ms="2670" started-at="2019-08-14T11:12:37Z" finished-at="2019-08-14T11:12:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarRUTnoSalesForce -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0002_Rut_no_registrado_SalesForce@6adca536]" name="ingresarPASS" duration-ms="5524" started-at="2019-08-14T11:12:40Z" finished-at="2019-08-14T11:12:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:3, instance:scripts.caso0002_Rut_no_registrado_SalesForce@6adca536]" name="cargarEvidencias" duration-ms="1006" started-at="2019-08-14T11:12:45Z" finished-at="2019-08-14T11:12:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cargarEvidencias -->
-      </class> <!-- scripts.caso0002_Rut_no_registrado_SalesForce -->
+    <test name="Default test" duration-ms="13404" started-at="2019-08-14T16:58:24Z" finished-at="2019-08-14T16:58:38Z">
       <class name="scripts.caso0001_Validar_valor_rut_invalido">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@649d209a]" name="ejecutarBrowser" is-config="true" duration-ms="4724" started-at="2019-08-14T11:12:15Z" finished-at="2019-08-14T11:12:19Z">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4786" started-at="2019-08-14T12:58:24Z" finished-at="2019-08-14T12:58:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0002_Rut_no_registrado_SalesForce@6adca536]" name="ejecutarBrowser" is-config="true" duration-ms="4509" started-at="2019-08-14T11:12:19Z" finished-at="2019-08-14T11:12:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0003_Rut_no_registrado_Hooly@357246de]" name="ejecutarBrowser" is-config="true" duration-ms="4051" started-at="2019-08-14T11:12:24Z" finished-at="2019-08-14T11:12:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0004_Rut_no_registrado_Cognito@28f67ac7]" name="ejecutarBrowser" is-config="true" duration-ms="4180" started-at="2019-08-14T11:12:28Z" finished-at="2019-08-14T11:12:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@649d209a]" name="ingresarRutInvalido" duration-ms="1931" started-at="2019-08-14T11:12:32Z" finished-at="2019-08-14T11:12:34Z">
+        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="1796" started-at="2019-08-14T12:58:29Z" finished-at="2019-08-14T12:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarRutInvalido -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Validar_valor_rut_invalido@649d209a]" name="cargarEvidencias" duration-ms="3011" started-at="2019-08-14T11:12:34Z" finished-at="2019-08-14T11:12:37Z">
+        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cargarEvidencias" duration-ms="3008" started-at="2019-08-14T12:58:31Z" finished-at="2019-08-14T12:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@649d209a]" name="cerrarBrowser" is-config="true" duration-ms="3921" started-at="2019-08-14T11:13:04Z" finished-at="2019-08-14T11:13:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cerrarBrowser -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0002_Rut_no_registrado_SalesForce@6adca536]" name="cerrarBrowser" is-config="true" duration-ms="3854" started-at="2019-08-14T11:13:08Z" finished-at="2019-08-14T11:13:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cerrarBrowser -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0003_Rut_no_registrado_Hooly@357246de]" name="cerrarBrowser" is-config="true" duration-ms="3900" started-at="2019-08-14T11:13:12Z" finished-at="2019-08-14T11:13:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cerrarBrowser -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0004_Rut_no_registrado_Cognito@28f67ac7]" name="cerrarBrowser" is-config="true" duration-ms="3848" started-at="2019-08-14T11:13:16Z" finished-at="2019-08-14T11:13:20Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3799" started-at="2019-08-14T12:58:34Z" finished-at="2019-08-14T12:58:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
       </class> <!-- scripts.caso0001_Validar_valor_rut_invalido -->
-      <class name="scripts.caso0003_Rut_no_registrado_Hooly">
-        <test-method status="PASS" signature="ingresarRUTnoHooly()[pri:1, instance:scripts.caso0003_Rut_no_registrado_Hooly@357246de]" name="ingresarRUTnoHooly" duration-ms="2660" started-at="2019-08-14T11:12:46Z" finished-at="2019-08-14T11:12:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarRUTnoHooly -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0003_Rut_no_registrado_Hooly@357246de]" name="ingresarPASS" duration-ms="5464" started-at="2019-08-14T11:12:49Z" finished-at="2019-08-14T11:12:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:3, instance:scripts.caso0003_Rut_no_registrado_Hooly@357246de]" name="cargarEvidencias" duration-ms="1006" started-at="2019-08-14T11:12:54Z" finished-at="2019-08-14T11:12:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cargarEvidencias -->
-      </class> <!-- scripts.caso0003_Rut_no_registrado_Hooly -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
