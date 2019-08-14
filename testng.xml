@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test">
+		<classes>
+			<class name="scripts.caso0001_Validar_valor_rut_invalido"/>
+			<class name="scripts.caso0002_Rut_no_registrado_SalesForce"/>
+			<class name="scripts.caso0003_Rut_no_registrado_Hooly"/>
+			<class name="scripts.caso0004_Rut_no_registrado_Cognito"/>
+			<class name="scripts.caso0006_Rut_registrado_contraseña_no_valida"/>
+			<class name="scripts.caso0008_Ingresar_sin_Rut"/>
+			<class name="scripts.caso0010_Iniciar_Sesion_sin_Contraseña"/>
+			<class name="scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido"/>
+			<class name="scripts.caso0026_Cambiar_estado_almuerzo"/>
+			<class name="scripts.caso0027_Cambiar_estado_descanso"/>
+			<class name="scripts.caso0030_Cambiar_estado_ready"/>
+			<class name="scripts.caso0059_Actualizar_AFP_durante_llamada"/>
+			<class name="scripts.caso0074_Envio_sms_durante_llamada"/>				
+			<class name="scripts.caso0075_Reenvio_sms_durante_llamada"/>										
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
