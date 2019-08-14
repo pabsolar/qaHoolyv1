@@ -3,6 +3,9 @@ package scripts;
 import java.awt.RenderingHints.Key;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -31,7 +34,7 @@ public class caso0075_Reenvio_sms_durante_llamada {
 	
 	boolean continuar = true;
 	
-	@Test (priority = 0)
+	@BeforeTest
 	public void ejecutarBrowser() {
 		tools = new tools();
 		try {
@@ -243,7 +246,7 @@ public class caso0075_Reenvio_sms_durante_llamada {
 		
 	}
 	
-	@Test (priority = 9)
+	@AfterTest
 	public void cerrarBrowser() {
 		try {
 			
