@@ -4,7 +4,9 @@
 	<test name="Test">
 		<classes>
 			<class name="scripts.caso0001_Validar_valor_rut_invalido"/>	
-			<class name="scripts.caso0059_Actualizar_AFP_durante_llamada"/>										
+			<class name="scripts.caso0002_Rut_no_registrado_SalesForce"/>		
+			<class name="scripts.caso0003_Rut_no_registrado_Hooly"/>
+			<class name="scripts.caso0004_Rut_no_registrado_Cognito"/>										
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
