@@ -27,10 +27,10 @@ public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
 	
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0010_Iniciar_Sesion_sin_Contraseña";
+	String _class = "caso0023_Acutalizar_Browser_en_pantalla_bienvenido";
 	String _method = "";
 	
-	String Caso = "caso0010_Iniciar_Sesion_sin_Contraseña";
+	String Caso = "caso0023_Acutalizar_Browser_en_pantalla_bienvenido";
 	
 	boolean continuar = true;
 	
@@ -109,11 +109,13 @@ public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
 			Thread.sleep(1000);
 			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
 			System.out.println("Se presiona el boton F5 para acutalizar la plataforma");
+			Thread.sleep(200);
+			objDashboard.btnIniciarLlamador.sendKeys(Keys.chord(Keys.SHIFT, Keys.F5));
 			//objDashboard.labelBienvenido.sendKeys(Keys.F5);
 			//objDashboard.labelBienvenido.sendKeys(Keys.COMMAND, "t");
-			Thread.sleep(1000);
-			tools.setUrl("https://qa.hooly.app/dashboard");
-			tools.init();
+//			Thread.sleep(1000);
+//			tools.setUrl("https://qa.hooly.app/dashboard");
+//			tools.init();
 			Thread.sleep(2000);
 			tools.screenshot("scripts", Caso , "Se ha actualizado la plataforma y se mantiene la sesión Activa");
 			Thread.sleep(3000);

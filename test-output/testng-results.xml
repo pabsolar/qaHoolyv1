@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15411" started-at="2019-08-14T17:53:14Z" finished-at="2019-08-14T17:53:29Z">
+  <suite name="Default suite" duration-ms="25102" started-at="2019-08-16T14:52:48Z" finished-at="2019-08-16T14:53:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15411" started-at="2019-08-14T17:53:14Z" finished-at="2019-08-14T17:53:29Z">
-      <class name="scripts.caso0001_Validar_valor_rut_invalido">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="6795" started-at="2019-08-14T13:53:14Z" finished-at="2019-08-14T13:53:21Z">
+    <test name="Default test" duration-ms="25102" started-at="2019-08-16T14:52:48Z" finished-at="2019-08-16T14:53:13Z">
+      <class name="scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4796" started-at="2019-08-16T10:52:48Z" finished-at="2019-08-16T10:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="1806" started-at="2019-08-14T13:53:21Z" finished-at="2019-08-14T13:53:22Z">
+        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido@2aaf7cc2]" name="ingresarRUT" duration-ms="2540" started-at="2019-08-16T10:52:52Z" finished-at="2019-08-16T10:52:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ingresarRutInvalido -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cargarEvidencias" duration-ms="3006" started-at="2019-08-14T13:53:22Z" finished-at="2019-08-14T13:53:25Z">
+        </test-method> <!-- ingresarRUT -->
+        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido@2aaf7cc2]" name="ingresarPASS" duration-ms="5383" started-at="2019-08-16T10:52:55Z" finished-at="2019-08-16T10:53:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ingresarPASS -->
+        <test-method status="PASS" signature="validarPagBienvenidos()[pri:3, instance:scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido@2aaf7cc2]" name="validarPagBienvenidos" duration-ms="7590" started-at="2019-08-16T10:53:00Z" finished-at="2019-08-16T10:53:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validarPagBienvenidos -->
+        <test-method status="PASS" signature="cargarEvidencias()[pri:4, instance:scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido@2aaf7cc2]" name="cargarEvidencias" duration-ms="1005" started-at="2019-08-16T10:53:08Z" finished-at="2019-08-16T10:53:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3791" started-at="2019-08-14T13:53:25Z" finished-at="2019-08-14T13:53:29Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3770" started-at="2019-08-16T10:53:09Z" finished-at="2019-08-16T10:53:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
-      </class> <!-- scripts.caso0001_Validar_valor_rut_invalido -->
+      </class> <!-- scripts.caso0023_Acutalizar_Browser_en_pantalla_bienvenido -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -56,6 +56,7 @@ public class caso0001_Validar_valor_rut_invalido {
 	public void ingresarRutInvalido() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT no valido");
 			Thread.sleep(300);
 			objIndex.textRut.click();

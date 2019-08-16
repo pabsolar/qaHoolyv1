@@ -4,9 +4,7 @@
 	<test name="Test">
 		<classes>
 			<class name="scripts.caso0001_Validar_valor_rut_invalido"/>	
-			<class name="scripts.caso0002_Rut_no_registrado_SalesForce"/>		
-			<class name="scripts.caso0003_Rut_no_registrado_Hooly"/>
-			<class name="scripts.caso0004_Rut_no_registrado_Cognito"/>										
+			<class name="scripts.caso0002_Rut_no_registrado_SalesForce"/>											
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
