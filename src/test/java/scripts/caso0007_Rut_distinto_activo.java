@@ -18,7 +18,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0010_Iniciar_Sesion_sin_Contraseña {
+public class caso0007_Rut_distinto_activo {
 
 	tools tools;
 	pageIndex objIndex;
@@ -27,10 +27,10 @@ public class caso0010_Iniciar_Sesion_sin_Contraseña {
 	
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0010_Iniciar_Sesion_sin_Contraseña";
+	String _class = "caso0007_Rut_distinto_activo";
 	String _method = "";
 	
-	String Caso = "caso0010_Iniciar_Sesion_sin_Contraseña";
+	String Caso = "caso0007_Rut_distinto_activo";
 	
 	boolean continuar = true;
 	
@@ -59,12 +59,11 @@ public class caso0010_Iniciar_Sesion_sin_Contraseña {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
-			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("Se Ingresa un RUT Registrado");
+			System.out.println("Se Ingresa un RUT Registrado, pero no esta activo para Hooly");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys("167675689");
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -86,11 +85,11 @@ public class caso0010_Iniciar_Sesion_sin_Contraseña {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("");
-			tools.screenshot("scripts", Caso , "No se ingresa Contraseña");
-			objIndex.textPass.sendKeys(Keys.TAB);
+			objIndex.textPass.sendKeys("Pablo12345.");
+			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
+			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Ingreso sin Contraseña");
+			tools.screenshot("scripts", Caso , "Contraseña No Valida");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -102,8 +101,84 @@ public class caso0010_Iniciar_Sesion_sin_Contraseña {
 		
 	}
 	
-	
 	@Test (priority = 3)
+	public void validarPagBienvenidos() {
+		objDashboard = new pageDashboard(tools.getDriver());
+		try {
+			System.out.println("Bienvenidos a Hooly");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 4)
+	public void iniciarLlamador() {
+		try {
+			System.out.println("Se inicia llamador");
+			objDashboard.btnIniciarLlamador.click();
+			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
+			Thread.sleep(2000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 5)
+	public void llamadorEsperandoLead() {
+		try {
+			System.out.println("Espernando Lead");
+			tools.screenshot("scripts", Caso , "Al no estar activo, no se inician Llamadas");
+			Thread.sleep(10000);
+
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 6)
+	public void cerrarSesion() {
+		objCaller = new pageCaller(tools.getDriver());
+		try {
+			System.out.println("Se inicia el cierre de sesión");
+			Thread.sleep(300);
+			objCaller.btnSalir.click();
+			tools.screenshot("scripts", Caso , "Salir Llamador");
+			Thread.sleep(500);
+			objDashboard.btnSesion.click();
+			tools.screenshot("scripts", Caso , "Menu Perfil");
+			Thread.sleep(300);
+			objDashboard.btnCerrarSesion.click();
+			tools.screenshot("scripts", Caso , "Cerrando Sesión");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Pantalla de Inicio de Hooly");
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	
+	@Test (priority = 7)
 	public void cargarEvidencias() {
 		try {
 			

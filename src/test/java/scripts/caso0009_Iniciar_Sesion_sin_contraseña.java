@@ -18,7 +18,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0007_ {
+public class caso0009_Iniciar_Sesion_sin_contraseña {
 
 	tools tools;
 	pageIndex objIndex;
@@ -27,10 +27,10 @@ public class caso0007_ {
 	
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0006_Rut_registrado_contraseña_no_valida";
+	String _class = "caso0009_Iniciar_Sesion_sin_contraseña";
 	String _method = "";
 	
-	String Caso = "caso0006_Rut_registrado_contraseña_no_valida";
+	String Caso = "caso0009_Iniciar_Sesion_sin_contraseña";
 	
 	boolean continuar = true;
 	
@@ -59,6 +59,7 @@ public class caso0007_ {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
@@ -85,11 +86,11 @@ public class caso0007_ {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("Test2019.");
-			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
-			objIndex.btnSiguiente_002.click();
+			objIndex.textPass.sendKeys("");
+			tools.screenshot("scripts", Caso , "No se ingresa Contraseña");
+			objIndex.textPass.sendKeys(Keys.TAB);
 			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Contraseña No Valida");
+			tools.screenshot("scripts", Caso , "Ingreso sin Contraseña");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -107,7 +108,22 @@ public class caso0007_ {
 		try {
 			
 			System.out.println("Cargando datos a GIT");
-			Thread.sleep(1000);
+			
+			ProcessBuilder processBuilder = new ProcessBuilder();
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
+					" ; git init ; " +
+					" git add . ; " +
+					" git commit -m \"all\" ;" +
+					" git fetch ; " +
+					" git pull --rebase origin master ; " +
+					" git commit -m \"AutoTest\" ; " +
+					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
+					" git push  ; " +
+					" git push origin master ; " +
+					" git push -u origin master");
+			Process p = processBuilder.start();
+			
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;
