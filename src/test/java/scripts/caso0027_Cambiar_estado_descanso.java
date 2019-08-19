@@ -59,6 +59,7 @@ public class caso0027_Cambiar_estado_descanso {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
@@ -175,7 +176,22 @@ public class caso0027_Cambiar_estado_descanso {
 		try {
 			
 			System.out.println("Cargando datos a GIT");
-			Thread.sleep(1000);
+			
+			ProcessBuilder processBuilder = new ProcessBuilder();
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
+					" ; git init ; " +
+					" git add . ; " +
+					" git commit -m \"all\" ;" +
+					" git fetch ; " +
+					" git pull --rebase origin master ; " +
+					" git commit -m \"AutoTest\" ; " +
+					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
+					" git push  ; " +
+					" git push origin master ; " +
+					" git push -u origin master");
+			Process p = processBuilder.start();
+			
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;

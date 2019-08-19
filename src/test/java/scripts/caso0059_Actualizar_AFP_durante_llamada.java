@@ -59,6 +59,7 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
