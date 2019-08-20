@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40790" started-at="2019-08-19T15:57:20Z" finished-at="2019-08-19T15:58:01Z">
+  <suite name="Default suite" duration-ms="14106" started-at="2019-08-20T18:52:46Z" finished-at="2019-08-20T18:53:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40790" started-at="2019-08-19T15:57:20Z" finished-at="2019-08-19T15:58:01Z">
-      <class name="scripts.caso0007_Rut_distinto_activo">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4426" started-at="2019-08-19T11:57:20Z" finished-at="2019-08-19T11:57:25Z">
+    <test name="Default test" duration-ms="14106" started-at="2019-08-20T18:52:46Z" finished-at="2019-08-20T18:53:00Z">
+      <class name="scripts.caso0001_Validar_valor_rut_invalido">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4752" started-at="2019-08-20T14:52:46Z" finished-at="2019-08-20T14:52:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="ingresarRUT" duration-ms="2545" started-at="2019-08-19T11:57:25Z" finished-at="2019-08-19T11:57:27Z">
+        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="2485" started-at="2019-08-20T14:52:51Z" finished-at="2019-08-20T14:52:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ingresarRUT -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="ingresarPASS" duration-ms="5400" started-at="2019-08-19T11:57:27Z" finished-at="2019-08-19T11:57:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="validarPagBienvenidos()[pri:3, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="validarPagBienvenidos" duration-ms="2677" started-at="2019-08-19T11:57:33Z" finished-at="2019-08-19T11:57:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validarPagBienvenidos -->
-        <test-method status="PASS" signature="iniciarLlamador()[pri:4, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="iniciarLlamador" duration-ms="2918" started-at="2019-08-19T11:57:35Z" finished-at="2019-08-19T11:57:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iniciarLlamador -->
-        <test-method status="PASS" signature="llamadorEsperandoLead()[pri:5, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="llamadorEsperandoLead" duration-ms="10725" started-at="2019-08-19T11:57:38Z" finished-at="2019-08-19T11:57:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- llamadorEsperandoLead -->
-        <test-method status="PASS" signature="cerrarSesion()[pri:6, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="cerrarSesion" duration-ms="5224" started-at="2019-08-19T11:57:49Z" finished-at="2019-08-19T11:57:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cerrarSesion -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:7, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="cargarEvidencias" duration-ms="3006" started-at="2019-08-19T11:57:54Z" finished-at="2019-08-19T11:57:57Z">
+        </test-method> <!-- ingresarRutInvalido -->
+        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cargarEvidencias" duration-ms="3012" started-at="2019-08-20T14:52:53Z" finished-at="2019-08-20T14:52:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0007_Rut_distinto_activo@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3850" started-at="2019-08-19T11:57:57Z" finished-at="2019-08-19T11:58:01Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Validar_valor_rut_invalido@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3842" started-at="2019-08-20T14:52:56Z" finished-at="2019-08-20T14:53:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
-      </class> <!-- scripts.caso0007_Rut_distinto_activo -->
+      </class> <!-- scripts.caso0001_Validar_valor_rut_invalido -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
