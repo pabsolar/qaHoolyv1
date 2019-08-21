@@ -3,8 +3,7 @@
 <suite name="Suite">
 	<test name="Test">
 		<classes>
-			<class name="scripts.caso0001_Validar_valor_rut_invalido"/>	
-			<class name="scripts.caso0002_Rut_no_registrado_SalesForce"/>											
+			<class name="scripts.caso0001_Validar_valor_rut_invalido"/>									
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

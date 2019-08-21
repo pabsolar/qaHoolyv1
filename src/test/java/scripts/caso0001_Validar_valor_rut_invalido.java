@@ -81,7 +81,7 @@ public class caso0001_Validar_valor_rut_invalido {
 			System.out.println("Cargando datos a GIT");
 			
 			ProcessBuilder processBuilder = new ProcessBuilder();
-			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/test/" + 
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
 					" ; git init ; " +
 					" git add . ; " +
 					" git commit -m \"all\" ;" +
