@@ -90,6 +90,12 @@ public class pageCaller {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[1]/div/form/div/button")
     public WebElement btnGuardarDatos;
     
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div[3]/div/div/section[2]/div/button[1]")
+    public WebElement btnContinuarSinGuardar;
+    
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div[3]/div/div/section[2]/div/button[2]")
+    public WebElement btnCancelarContinuarSinGuardar;
+    
     
     //Información del Cliente
     
@@ -118,7 +124,7 @@ public class pageCaller {
     public WebElement textTelefono;
     
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[2]/div/form/div/div[5]/div[2]/div/div/div/div/input")
-    public WebElement textMail;
+    public WebElement textCorreo;
     
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[2]/div/form/div/button")
     public WebElement btnGuardarInfirmacionCliente;

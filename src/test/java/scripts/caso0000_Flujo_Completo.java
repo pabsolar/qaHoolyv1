@@ -26,11 +26,10 @@ public class caso0000_Flujo_Completo {
 	pageCaller objCaller;
 	
 	List<String> errores = new ArrayList<>();
-	String _directory = "scripts";
-	String _class = "caso0000_Flujo_Completo";
-	String _method = "";
-	
 	String Caso = "caso0000_Flujo_Completo";
+	String _directory = "scripts";
+	String _class = Caso;
+	String _method = "";
 	
 	boolean continuar = true;
 	
@@ -63,7 +62,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys("167675689");
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +84,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("David12345.");
+			objIndex.textPass.sendKeys("Pablo12345.");
 			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
@@ -110,7 +109,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(200);
 			objDashboard.btnIniciarLlamador.click();
 			tools.screenshot("scripts", Caso , "Se ha iniciado el Llamador");
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -128,12 +127,10 @@ public class caso0000_Flujo_Completo {
 			System.out.println("Se ha conectado la llamada");
 			Thread.sleep(1500);
 			tools.screenshot("scripts", Caso , "Pantalla del Llamador con datos del cliente");
-			System.out.println("Se ha dado un tiempo de 20 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mensionado");
-			Thread.sleep(6000);
-			objCaller.btnFinalizarLlamada.click();
+			System.out.println("Se ha dado un tiempo de 15 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
 			Thread.sleep(1500);
 			tools.screenshot("scripts", Caso , "Pantalla de datos del cliente");
-			Thread.sleep(1500);
+			Thread.sleep(5000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -145,10 +142,59 @@ public class caso0000_Flujo_Completo {
 	}
 	
 	@Test (priority = 5)
-	public void ModificarDatosClienteNombre() {
+	public void enviarMensajeDuranteLlamada() {
+		objCaller = new pageCaller(tools.getDriver());
 		try {
-			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Cliente");
+			System.out.println("Se inicia el envio de SMS");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se inicia el proceso de Envio de SMS");
+			System.out.println("Se presiona Enviar SMS");
+			objCaller.bntEnviarLinkSMS.click();
+			Thread.sleep(2500);
+			tools.screenshot("scripts", Caso , "Se presiona el botón enviar Link por sms");
+			System.out.println("Se presiona RE-Enviar SMS");
+			objCaller.btnConfirmarEnvio_001.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se presiona el botón re-enviar Link por sms");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 6)
+	public void finalizarLlamada() {
+		objCaller = new pageCaller(tools.getDriver());
+		try {
+			Thread.sleep(4000);
+			System.out.println("Se finaliza la Llamada");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se finaliza la llamada");
+			System.out.println("Se presiona Enviar SMS");
+			objCaller.btnFinalizarLlamada.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se ha finalizado la llamada");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 7)
+	public void modificarDatosClienteNombre() {
+		try {
 			System.out.println("Modificar Datos, Nombre");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Nombre Cliente");
 			Thread.sleep(100);
 			objCaller.textNombres.click();
 			objCaller.textNombres.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Chernobyl");
@@ -168,14 +214,14 @@ public class caso0000_Flujo_Completo {
 		
 	}
 	
-	@Test (priority = 6)
-	public void ModificarDatosClienteApellido() {
+	@Test (priority = 8)
+	public void modificarDatosClienteApeliido() {
 		try {
-			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Cliente");
-			System.out.println("Modificar Datos, Nombre");
-			Thread.sleep(200);
+			System.out.println("Modificar Datos, Apellido");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Apellido Cliente");
+			Thread.sleep(100);
 			objCaller.textApellidos.click();
-			objCaller.textApellidos.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Testing");
+			objCaller.textApellidos.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Quacito");
 			tools.screenshot("scripts", Caso , "Se ha modificado el Apellido del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -192,12 +238,12 @@ public class caso0000_Flujo_Completo {
 		
 	}
 	
-	@Test (priority = 7)
-	public void ModificarDatosClienteRUT() {
+	@Test (priority = 9)
+	public void modificarDatosClienteRUT() {
 		try {
-			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Cliente");
-			System.out.println("Modificar Datos, Nombre");
-			Thread.sleep(200);
+			System.out.println("Modificar Datos, RUT");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar RUT Cliente");
+			Thread.sleep(100);
 			objCaller.textRUT.click();
 			objCaller.textRUT.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "167675689");
 			tools.screenshot("scripts", Caso , "Se ha modificado el RUT del Cliente");
@@ -216,14 +262,15 @@ public class caso0000_Flujo_Completo {
 		
 	}
 	
-	@Test (priority = 8)
-	public void ModificarDatosClienteFDN() {
+	@Test (priority = 10)
+	public void modificarDatosClienteFDN() {
 		try {
-			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Cliente");
-			System.out.println("Modificar Datos, Nombre");
-			Thread.sleep(200);
-			objCaller.textFechaNacimiento.click();
-			objCaller.textFechaNacimiento.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "13011988");
+			System.out.println("Modificar Datos, Fecha de Nacimiento");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar FDN Cliente");
+			Thread.sleep(100);
+			//objCaller.textFechaNacimiento.click();
+			//objCaller.textFechaNacimiento.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "13011988");
+			objCaller.textFechaNacimiento.sendKeys("13011988");
 			tools.screenshot("scripts", Caso , "Se ha modificado la FDN del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -240,12 +287,250 @@ public class caso0000_Flujo_Completo {
 		
 	}
 	
-	@Test (priority = 9)
+	@Test (priority = 11)
+	public void modificarDatosClienteAfpActual() {
+		try {
+			System.out.println("Modificar Datos, AFP Actual");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar AFP Actual Cliente");
+			Thread.sleep(100);
+			objCaller.selAFPActual.click();
+			objCaller.selAFPActual.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Capital");
+			tools.screenshot("scripts", Caso , "Se ha modificado la AFP del Cliente");
+			Thread.sleep(200);
+			objCaller.btnGuardarInfirmacionCliente.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Mensaje de Guardar Datos");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 12)
+	public void modificarDatosClienteGenero() {
+		try {
+			System.out.println("Modificar Datos, Genero");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Genero Cliente");
+			Thread.sleep(100);
+			objCaller.selGenero.click();
+			objCaller.selGenero.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Masculino");
+			tools.screenshot("scripts", Caso , "Se ha modificado el Genero del Cliente");
+			Thread.sleep(200);
+			objCaller.btnGuardarInfirmacionCliente.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Mensaje de Guardar Datos");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 13)
+	public void modificarDatosClienteTeléfono() {
+		try {
+			System.out.println("Modificar Datos, Teléfono");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar teléfono Cliente");
+			Thread.sleep(100);
+			objCaller.textTelefono.click();
+			objCaller.textTelefono.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "934067377");
+			tools.screenshot("scripts", Caso , "Se ha modificado el teléfono del Cliente");
+			Thread.sleep(200);
+			objCaller.btnGuardarInfirmacionCliente.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Mensaje de Guardar Datos");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 14)
+	public void modificarDatosClienteCorreo() {
+		try {
+			System.out.println("Modificar Datos, Correo");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Correo Cliente");
+			Thread.sleep(100);
+			//objCaller.textCorreo.click();
+			objCaller.textCorreo.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "chernobyl@afp.capital");
+			tools.screenshot("scripts", Caso , "Se ha modificado el correo del Cliente");
+			Thread.sleep(200);
+			objCaller.btnGuardarInfirmacionCliente.click();
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Mensaje de Guardar Datos");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+
+	@Test (priority = 15)
+	public void seleccionDeEstadoCierre() {
+		try {
+			System.out.println("Se comienza a Cerrar el Lead");
+			tools.screenshot("scripts", Caso , "Cerrando Lead");
+			Thread.sleep(100);
+			objCaller.selEstado.click();
+			objCaller.selEstado.sendKeys("Contactado");
+			Thread.sleep(200);
+			objCaller.selEstado.sendKeys(Keys.TAB);
+			tools.screenshot("scripts", Caso , "Motivo de Cierre, Contactado");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+
+	@Test (priority = 16)
+	public void agregarNota() {
+		try {
+			System.out.println("Agregar Nota al Cierre del Lead");
+			tools.screenshot("scripts", Caso , "Agregando Nota");
+			Thread.sleep(100);
+			objCaller.textNota.click();
+			objCaller.textNota.sendKeys("Cerrando Lead QA");
+			tools.screenshot("scripts", Caso , "Se ha agreado nota al Cierre");
+			Thread.sleep(500);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 17)
+	public void modificarDatoClienteNombre() {
+		try {
+			System.out.println("Modificar Datos, Nombre");
+			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Nombre Cliente");
+			Thread.sleep(100);
+			objCaller.textNombres.click();
+			objCaller.textNombres.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "QA Chernobyl");
+			tools.screenshot("scripts", Caso , "Se ha modificado el Nombre del Cliente");
+			Thread.sleep(500);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 18)
+	public void guardarDatos() {
+		try {
+			System.out.println("Se intentara cerrar el Lead sin guardar los datos del Cliente");
+			tools.screenshot("scripts", Caso , "Datos pendientes por guardar");
+			Thread.sleep(300);
+			objCaller.btnGuardarDatos.click();
+			tools.screenshot("scripts", Caso , "Hooly no permite cerrar el lead sin resguardar todos los datos");
+			Thread.sleep(1000);
+			
+			System.out.println("Se cancela el mensaje para guardar los datos modificados del Cliente");
+			objCaller.btnCancelarContinuarSinGuardar.click();
+			tools.screenshot("scripts", Caso , "Se elimina el mensaje emergente");
+			Thread.sleep(1000);
+			
+			System.out.println("Se guardan los datos pendientes del cliente");
+			objCaller.btnGuardarInfirmacionCliente.click();
+			tools.screenshot("scripts", Caso , "Se actualizan los datos del Cliente");
+			Thread.sleep(1000);
+			
+			System.out.println("Se cierra el Lead");
+			objCaller.btnGuardarDatos.click();
+			tools.screenshot("scripts", Caso , "Se cierra el Lead");
+			Thread.sleep(1000);
+			
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 19)
+	public void cerrarSesion() {
+		try {
+			System.out.println("Se inicia el cierre de sesión");
+			Thread.sleep(300);
+			objCaller.btnSalir.click();
+			tools.screenshot("scripts", Caso , "Salir Llamador");
+			
+			System.out.println("Se presiona le menu del perfil ejecutivo");
+			Thread.sleep(200);
+			objDashboard.btnSesion.click();
+			tools.screenshot("scripts", Caso , "Menu Perfil");
+			Thread.sleep(300);
+			
+			System.out.println("Se cierra Sesión");
+			objDashboard.btnCerrarSesion.click();
+			tools.screenshot("scripts", Caso , "Cerrando Sesión");
+			Thread.sleep(2000);
+			tools.screenshot("scripts", Caso , "Pantalla de Inicio de Hooly");
+			Thread.sleep(200);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 20)
 	public void cargarEvidencias() {
 		try {
 			
 			System.out.println("Cargando datos a GIT");
-			Thread.sleep(1000);
+			
+			ProcessBuilder processBuilder = new ProcessBuilder();
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
+					" ; git init ; " +
+					" git add . ; " +
+					" git commit -m \"all\" ;" +
+					" git fetch ; " +
+					" git pull --rebase origin master ; " +
+					" git commit -m \"AutoTest\" ; " +
+					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
+					" git push  ; " +
+					" git push origin master ; " +
+					" git push -u origin master");
+			Process p = processBuilder.start();
+			
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;
