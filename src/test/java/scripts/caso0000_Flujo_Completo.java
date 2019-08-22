@@ -127,8 +127,11 @@ public class caso0000_Flujo_Completo {
 			System.out.println("Se ha conectado la llamada");
 			Thread.sleep(1500);
 			tools.screenshot("scripts", Caso , "Pantalla del Llamador con datos del cliente");
-			System.out.println("Se ha dado un tiempo de 15 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
+			System.out.println("Se ha dado un tiempo de 16 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
 			Thread.sleep(1500);
+			System.out.println("Se elimina el elemento emergente de micrófono");
+			//objCaller.espacioEnHooly.clear();
+			//objCaller.espacioEnHooly.sendKeys(Keys.ESCAPE);
 			tools.screenshot("scripts", Caso , "Pantalla de datos del cliente");
 			Thread.sleep(5000);
 			

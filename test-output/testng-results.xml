@@ -2,96 +2,96 @@
 <testng-results skipped="0" failed="0" total="20" passed="20">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107154" started-at="2019-08-21T20:22:34Z" finished-at="2019-08-21T20:24:21Z">
+  <suite name="Default suite" duration-ms="107974" started-at="2019-08-21T20:34:14Z" finished-at="2019-08-21T20:36:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107154" started-at="2019-08-21T20:22:34Z" finished-at="2019-08-21T20:24:21Z">
+    <test name="Default test" duration-ms="107974" started-at="2019-08-21T20:34:14Z" finished-at="2019-08-21T20:36:02Z">
       <class name="scripts.caso0000_Flujo_Completo">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ejecutarBrowser" is-config="true" duration-ms="4470" started-at="2019-08-21T16:22:34Z" finished-at="2019-08-21T16:22:38Z">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ejecutarBrowser" is-config="true" duration-ms="4800" started-at="2019-08-21T16:34:14Z" finished-at="2019-08-21T16:34:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ingresarRUT" duration-ms="2527" started-at="2019-08-21T16:22:38Z" finished-at="2019-08-21T16:22:41Z">
+        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ingresarRUT" duration-ms="2558" started-at="2019-08-21T16:34:19Z" finished-at="2019-08-21T16:34:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarRUT -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ingresarPASS" duration-ms="5373" started-at="2019-08-21T16:22:41Z" finished-at="2019-08-21T16:22:46Z">
+        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ingresarPASS" duration-ms="5379" started-at="2019-08-21T16:34:21Z" finished-at="2019-08-21T16:34:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="ingresoDashboard()[pri:3, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ingresoDashboard" duration-ms="2659" started-at="2019-08-21T16:22:46Z" finished-at="2019-08-21T16:22:49Z">
+        <test-method status="PASS" signature="ingresoDashboard()[pri:3, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="ingresoDashboard" duration-ms="2650" started-at="2019-08-21T16:34:27Z" finished-at="2019-08-21T16:34:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresoDashboard -->
-        <test-method status="PASS" signature="iniciandoLlamada()[pri:4, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="iniciandoLlamada" duration-ms="9443" started-at="2019-08-21T16:22:49Z" finished-at="2019-08-21T16:22:58Z">
+        <test-method status="PASS" signature="iniciandoLlamada()[pri:4, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="iniciandoLlamada" duration-ms="9466" started-at="2019-08-21T16:34:29Z" finished-at="2019-08-21T16:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciandoLlamada -->
-        <test-method status="PASS" signature="enviarMensajeDuranteLlamada()[pri:5, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="enviarMensajeDuranteLlamada" duration-ms="7779" started-at="2019-08-21T16:22:58Z" finished-at="2019-08-21T16:23:06Z">
+        <test-method status="PASS" signature="enviarMensajeDuranteLlamada()[pri:5, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="enviarMensajeDuranteLlamada" duration-ms="7812" started-at="2019-08-21T16:34:39Z" finished-at="2019-08-21T16:34:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enviarMensajeDuranteLlamada -->
-        <test-method status="PASS" signature="finalizarLlamada()[pri:6, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="finalizarLlamada" duration-ms="8511" started-at="2019-08-21T16:23:06Z" finished-at="2019-08-21T16:23:14Z">
+        <test-method status="PASS" signature="finalizarLlamada()[pri:6, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="finalizarLlamada" duration-ms="8502" started-at="2019-08-21T16:34:47Z" finished-at="2019-08-21T16:34:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizarLlamada -->
-        <test-method status="PASS" signature="modificarDatosClienteNombre()[pri:7, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteNombre" duration-ms="4722" started-at="2019-08-21T16:23:14Z" finished-at="2019-08-21T16:23:19Z">
+        <test-method status="PASS" signature="modificarDatosClienteNombre()[pri:7, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteNombre" duration-ms="4718" started-at="2019-08-21T16:34:55Z" finished-at="2019-08-21T16:35:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteNombre -->
-        <test-method status="PASS" signature="modificarDatosClienteApeliido()[pri:8, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteApeliido" duration-ms="4621" started-at="2019-08-21T16:23:19Z" finished-at="2019-08-21T16:23:24Z">
+        <test-method status="PASS" signature="modificarDatosClienteApeliido()[pri:8, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteApeliido" duration-ms="4732" started-at="2019-08-21T16:35:00Z" finished-at="2019-08-21T16:35:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteApeliido -->
-        <test-method status="PASS" signature="modificarDatosClienteRUT()[pri:9, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteRUT" duration-ms="4682" started-at="2019-08-21T16:23:24Z" finished-at="2019-08-21T16:23:28Z">
+        <test-method status="PASS" signature="modificarDatosClienteRUT()[pri:9, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteRUT" duration-ms="4614" started-at="2019-08-21T16:35:04Z" finished-at="2019-08-21T16:35:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteRUT -->
-        <test-method status="PASS" signature="modificarDatosClienteFDN()[pri:10, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteFDN" duration-ms="4564" started-at="2019-08-21T16:23:28Z" finished-at="2019-08-21T16:23:33Z">
+        <test-method status="PASS" signature="modificarDatosClienteFDN()[pri:10, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteFDN" duration-ms="4675" started-at="2019-08-21T16:35:09Z" finished-at="2019-08-21T16:35:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteFDN -->
-        <test-method status="PASS" signature="modificarDatosClienteAfpActual()[pri:11, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteAfpActual" duration-ms="4928" started-at="2019-08-21T16:23:33Z" finished-at="2019-08-21T16:23:38Z">
+        <test-method status="PASS" signature="modificarDatosClienteAfpActual()[pri:11, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteAfpActual" duration-ms="4933" started-at="2019-08-21T16:35:14Z" finished-at="2019-08-21T16:35:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteAfpActual -->
-        <test-method status="PASS" signature="modificarDatosClienteGenero()[pri:12, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteGenero" duration-ms="4858" started-at="2019-08-21T16:23:38Z" finished-at="2019-08-21T16:23:43Z">
+        <test-method status="PASS" signature="modificarDatosClienteGenero()[pri:12, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteGenero" duration-ms="4886" started-at="2019-08-21T16:35:19Z" finished-at="2019-08-21T16:35:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteGenero -->
-        <test-method status="PASS" signature="modificarDatosClienteTeléfono()[pri:13, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteTeléfono" duration-ms="4657" started-at="2019-08-21T16:23:43Z" finished-at="2019-08-21T16:23:47Z">
+        <test-method status="PASS" signature="modificarDatosClienteTeléfono()[pri:13, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteTeléfono" duration-ms="4722" started-at="2019-08-21T16:35:24Z" finished-at="2019-08-21T16:35:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteTeléfono -->
-        <test-method status="PASS" signature="modificarDatosClienteCorreo()[pri:14, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteCorreo" duration-ms="4689" started-at="2019-08-21T16:23:47Z" finished-at="2019-08-21T16:23:52Z">
+        <test-method status="PASS" signature="modificarDatosClienteCorreo()[pri:14, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatosClienteCorreo" duration-ms="4677" started-at="2019-08-21T16:35:28Z" finished-at="2019-08-21T16:35:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatosClienteCorreo -->
-        <test-method status="PASS" signature="seleccionDeEstadoCierre()[pri:15, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="seleccionDeEstadoCierre" duration-ms="3421" started-at="2019-08-21T16:23:52Z" finished-at="2019-08-21T16:23:56Z">
+        <test-method status="PASS" signature="seleccionDeEstadoCierre()[pri:15, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="seleccionDeEstadoCierre" duration-ms="3473" started-at="2019-08-21T16:35:33Z" finished-at="2019-08-21T16:35:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seleccionDeEstadoCierre -->
-        <test-method status="PASS" signature="agregarNota()[pri:16, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="agregarNota" duration-ms="2133" started-at="2019-08-21T16:23:56Z" finished-at="2019-08-21T16:23:58Z">
+        <test-method status="PASS" signature="agregarNota()[pri:16, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="agregarNota" duration-ms="2133" started-at="2019-08-21T16:35:36Z" finished-at="2019-08-21T16:35:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- agregarNota -->
-        <test-method status="PASS" signature="modificarDatoClienteNombre()[pri:17, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatoClienteNombre" duration-ms="2158" started-at="2019-08-21T16:23:58Z" finished-at="2019-08-21T16:24:00Z">
+        <test-method status="PASS" signature="modificarDatoClienteNombre()[pri:17, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="modificarDatoClienteNombre" duration-ms="2150" started-at="2019-08-21T16:35:39Z" finished-at="2019-08-21T16:35:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modificarDatoClienteNombre -->
-        <test-method status="PASS" signature="guardarDatos()[pri:18, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="guardarDatos" duration-ms="8117" started-at="2019-08-21T16:24:00Z" finished-at="2019-08-21T16:24:08Z">
+        <test-method status="PASS" signature="guardarDatos()[pri:18, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="guardarDatos" duration-ms="8222" started-at="2019-08-21T16:35:41Z" finished-at="2019-08-21T16:35:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- guardarDatos -->
-        <test-method status="PASS" signature="cerrarSesion()[pri:19, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="cerrarSesion" duration-ms="5961" started-at="2019-08-21T16:24:08Z" finished-at="2019-08-21T16:24:14Z">
+        <test-method status="PASS" signature="cerrarSesion()[pri:19, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="cerrarSesion" duration-ms="5975" started-at="2019-08-21T16:35:49Z" finished-at="2019-08-21T16:35:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarSesion -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:20, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="cargarEvidencias" duration-ms="3009" started-at="2019-08-21T16:24:14Z" finished-at="2019-08-21T16:24:17Z">
+        <test-method status="PASS" signature="cargarEvidencias()[pri:20, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="cargarEvidencias" duration-ms="3010" started-at="2019-08-21T16:35:55Z" finished-at="2019-08-21T16:35:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="cerrarBrowser" is-config="true" duration-ms="3843" started-at="2019-08-21T16:24:17Z" finished-at="2019-08-21T16:24:21Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0000_Flujo_Completo@6e3c1e69]" name="cerrarBrowser" is-config="true" duration-ms="3859" started-at="2019-08-21T16:35:58Z" finished-at="2019-08-21T16:36:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->

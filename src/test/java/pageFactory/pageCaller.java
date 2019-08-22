@@ -129,4 +129,8 @@ public class pageCaller {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[2]/div/form/div/button")
     public WebElement btnGuardarInfirmacionCliente;
 
+    
+    //Elementos HTML5
+    @FindBy(xpath = "//*[@id=\"root\"]/div/header")
+    public WebElement espacioEnHooly;
 }
