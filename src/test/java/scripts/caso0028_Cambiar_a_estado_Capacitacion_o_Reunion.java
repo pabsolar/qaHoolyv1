@@ -18,7 +18,8 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0022_ {
+public class caso0028_Cambiar_a_estado_Capacitacion_o_Reunion {
 
+	
 	
 }

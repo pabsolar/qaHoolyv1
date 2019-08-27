@@ -18,19 +18,19 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0004_Rut_no_registrado_Cognito {
+public class caso0008_Validar_Sesion_sin_ingresar_RUT {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	
+	String Caso = "caso0008_Ingresar_sin_Rut";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0004_Rut_no_registrado_SalesForce";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0004_Rut_no_registrado_SalesForce";
+	
 	
 	boolean continuar = true;
 	
@@ -56,18 +56,18 @@ public class caso0004_Rut_no_registrado_Cognito {
 	}
 	
 	@Test (priority = 1)
-	public void ingresarRUTnoCognito() {
+	public void ingresarSinRut() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("Se Ingresa un RUT no Registrado en Cognito");
+			System.out.println("No se ingresa el dato solicitado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("88755650");
+			objIndex.labelBienvenido.click();
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
-			objIndex.btnSiguiente_001.click();
-			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Hooly solicita ingresar un valor");
 			Thread.sleep(300);
 			
 		} catch (Exception e) {
@@ -80,30 +80,6 @@ public class caso0004_Rut_no_registrado_Cognito {
 	}
 	
 	@Test (priority = 2)
-	public void ingresarPASS() {
-		try {
-			System.out.println("Se Ingresa un Contraseña");
-			Thread.sleep(300);
-			objIndex.textPass.click();
-			Thread.sleep(300);
-			objIndex.textPass.sendKeys("Test2019.");
-			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
-			objIndex.btnSiguiente_002.click();
-			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Usuario No Registrado en SalesForce");
-			Thread.sleep(3000);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	
-	@Test (priority = 3)
 	public void cargarEvidencias() {
 		try {
 			

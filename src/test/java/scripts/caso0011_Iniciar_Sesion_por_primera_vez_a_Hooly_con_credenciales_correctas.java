@@ -18,7 +18,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0022_ {
+public class caso0011_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas {
 
 	
 }

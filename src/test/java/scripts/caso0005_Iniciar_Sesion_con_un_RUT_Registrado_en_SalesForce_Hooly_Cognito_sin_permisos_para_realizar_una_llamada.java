@@ -18,7 +18,22 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0022_ {
+public class caso0005_Iniciar_Sesion_con_un_RUT_Registrado_en_SalesForce_Hooly_Cognito_sin_permisos_para_realizar_una_llamada {
 
+	tools tools;
+	pageIndex objIndex;
+	pageDashboard objDashboard;
+	pageCaller objCaller;
+	String Caso = "caso0005_Iniciar_Sesion_con_un_RUT_Registrado_en_SalesForce_Hooly_Cognito_sin_permisos_para_realizar_una_llamada";
+	List<String> errores = new ArrayList<>();
+	String _directory = "scripts";
+	String _class = Caso;
+	String _method = "";
+	
+	
+	
+	boolean continuar = true;
+	
+	
 	
 }

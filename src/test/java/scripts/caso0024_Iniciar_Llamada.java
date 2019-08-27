@@ -18,7 +18,8 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0022_ {
+public class caso0024_Iniciar_Llamada {
 
+	
 	
 }

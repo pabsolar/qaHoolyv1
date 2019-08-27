@@ -18,19 +18,19 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0026_Cambiar_estado_almuerzo {
+public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_estado_distinto_a_Activo {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	
+	String Caso = "caso0007_Rut_distinto_activo";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0026_Cambiar_estado_almuerzo";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0026_Cambiar_estado_almuerzo";
+	
 	
 	boolean continuar = true;
 	
@@ -59,12 +59,11 @@ public class caso0026_Cambiar_estado_almuerzo {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
-			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("Se Ingresa RUT Registrado");
+			System.out.println("Se Ingresa un RUT Registrado, pero no esta activo para Hooly");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys("167675689");
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -82,15 +81,15 @@ public class caso0026_Cambiar_estado_almuerzo {
 	@Test (priority = 2)
 	public void ingresarPASS() {
 		try {
-			System.out.println("Se Ingresa Contraseña");
+			System.out.println("Se Ingresa un Contraseña");
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("David12345.");
-			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
+			objIndex.textPass.sendKeys("Pablo12345.");
+			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Se ha iniciado Sesión en Hooly");
+			tools.screenshot("scripts", Caso , "Contraseña No Valida");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -109,11 +108,7 @@ public class caso0026_Cambiar_estado_almuerzo {
 			System.out.println("Bienvenidos a Hooly");
 			Thread.sleep(1000);
 			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
-			Thread.sleep(2000);
-			System.out.println("Se inicia llamador");
-			objDashboard.btnIniciarLlamador.click();
-			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
-			Thread.sleep(100);
+			Thread.sleep(1000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -125,17 +120,12 @@ public class caso0026_Cambiar_estado_almuerzo {
 	}
 	
 	@Test (priority = 4)
-	public void cambioEstadoAlmuerzo() {
-		objCaller = new pageCaller(tools.getDriver());
+	public void iniciarLlamador() {
 		try {
-			System.out.println("Menu de Estados del Ejecutivo");
-			Thread.sleep(300);
-			tools.screenshot("scripts", Caso , "Imagen del Llamador Activo");
-			Thread.sleep(200);
-			System.out.println("Se selecciona el estado Almuerzo");
-			objCaller.btnAlmuerzo.click();
-			tools.screenshot("scripts", Caso , "Ejecutivo en estado Almuerzo");
-			Thread.sleep(3000);
+			System.out.println("Se inicia llamador");
+			objDashboard.btnIniciarLlamador.click();
+			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
+			Thread.sleep(2000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -147,15 +137,30 @@ public class caso0026_Cambiar_estado_almuerzo {
 	}
 	
 	@Test (priority = 5)
+	public void llamadorEsperandoLead() {
+		try {
+			System.out.println("Espernando Lead");
+			tools.screenshot("scripts", Caso , "Al no estar activo, no se inician Llamadas");
+			Thread.sleep(10000);
+
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 6)
 	public void cerrarSesion() {
-		objDashboard = new pageDashboard(tools.getDriver());
 		objCaller = new pageCaller(tools.getDriver());
 		try {
 			System.out.println("Se inicia el cierre de sesión");
 			Thread.sleep(300);
 			objCaller.btnSalir.click();
 			tools.screenshot("scripts", Caso , "Salir Llamador");
-			Thread.sleep(200);
+			Thread.sleep(500);
 			objDashboard.btnSesion.click();
 			tools.screenshot("scripts", Caso , "Menu Perfil");
 			Thread.sleep(300);
@@ -173,7 +178,7 @@ public class caso0026_Cambiar_estado_almuerzo {
 	}
 	
 	
-	@Test (priority = 6)
+	@Test (priority = 7)
 	public void cargarEvidencias() {
 		try {
 			
@@ -222,5 +227,4 @@ public class caso0026_Cambiar_estado_almuerzo {
 		}
 		
 	}
-	
 }

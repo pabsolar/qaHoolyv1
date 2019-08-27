@@ -18,19 +18,19 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0003_Rut_no_registrado_Hooly {
+public class caso0004_Iniciar_Sesion_con_un_RUT_no_registrado_en_Cognito {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	
+	String Caso = "caso0004_Rut_no_registrado_SalesForce";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0003_Rut_no_registrado_Hooly";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0003_Rut_no_registrado_Hooly";
+	
 	
 	boolean continuar = true;
 	
@@ -56,15 +56,15 @@ public class caso0003_Rut_no_registrado_Hooly {
 	}
 	
 	@Test (priority = 1)
-	public void ingresarRUTnoHooly() {
+	public void ingresarRUTnoCognito() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("Se Ingresa un RUT Registrado");
+			System.out.println("Se Ingresa un RUT no Registrado en Cognito");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys("88755650");
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -90,7 +90,7 @@ public class caso0003_Rut_no_registrado_Hooly {
 			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Usuario No Registrado en Hooly");
+			tools.screenshot("scripts", Caso , "Usuario No Registrado en SalesForce");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {

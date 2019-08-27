@@ -17,17 +17,17 @@ import org.testng.SkipException;
 import Tools.tools;
 import pageFactory.pageIndex;
 
-public class caso0001_Validar_valor_rut_invalido {
+public class caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena {
 
 	tools tools;
 	pageIndex objIndex;
-	
+	String Caso = "caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0001_Validar_valor_rut_invalido";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0001_Validar_valor_rut_invalido";
+	
 	
 	boolean continuar = true;
 	

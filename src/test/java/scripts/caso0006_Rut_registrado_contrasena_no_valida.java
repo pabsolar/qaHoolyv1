@@ -18,19 +18,19 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0006_Rut_registrado_contraseña_no_valida {
+public class caso0006_Rut_registrado_contrasena_no_valida {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	
+	String Caso = "caso0006_Rut_registrado_contraseña_no_valida";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0006_Rut_registrado_contraseña_no_valida";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0006_Rut_registrado_contraseña_no_valida";
+	
 	
 	boolean continuar = true;
 	

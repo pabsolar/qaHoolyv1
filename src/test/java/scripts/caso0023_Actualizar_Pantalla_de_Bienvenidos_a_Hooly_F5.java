@@ -18,7 +18,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0027_Cambiar_estado_descanso {
+public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
 
 	tools tools;
 	pageIndex objIndex;
@@ -27,10 +27,10 @@ public class caso0027_Cambiar_estado_descanso {
 	
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0027_Cambiar_estado_descanso";
+	String _class = "caso0023_Acutalizar_Browser_en_pantalla_bienvenido";
 	String _method = "";
 	
-	String Caso = "caso0027_Cambiar_estado_descanso";
+	String Caso = "caso0023_Acutalizar_Browser_en_pantalla_bienvenido";
 	
 	boolean continuar = true;
 	
@@ -60,7 +60,7 @@ public class caso0027_Cambiar_estado_descanso {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("Se Ingresa RUT Registrado");
+			System.out.println("Se Ingresa un RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
@@ -82,7 +82,7 @@ public class caso0027_Cambiar_estado_descanso {
 	@Test (priority = 2)
 	public void ingresarPASS() {
 		try {
-			System.out.println("Se Ingresa Contraseña");
+			System.out.println("Se Ingresa un Contraseña");
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
@@ -109,32 +109,16 @@ public class caso0027_Cambiar_estado_descanso {
 			System.out.println("Bienvenidos a Hooly");
 			Thread.sleep(1000);
 			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
-			Thread.sleep(2000);
-			System.out.println("Se inicia llamador");
-			objDashboard.btnIniciarLlamador.click();
-			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
-			Thread.sleep(100);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 4)
-	public void cambioEstadoAlmuerzo() {
-		objCaller = new pageCaller(tools.getDriver());
-		try {
-			System.out.println("Menu de Estados del Ejecutivo");
-			Thread.sleep(300);
-			tools.screenshot("scripts", Caso , "Imagen del Llamador Activo");
+			System.out.println("Se presiona el boton F5 para acutalizar la plataforma");
 			Thread.sleep(200);
-			System.out.println("Se selecciona el estado Descanso");
-			objCaller.btnDescanso.click();
-			tools.screenshot("scripts", Caso , "Ejecutivo en estado Descanso");
+			objDashboard.btnIniciarLlamador.sendKeys(Keys.chord(Keys.SHIFT, Keys.F5));
+			//objDashboard.labelBienvenido.sendKeys(Keys.F5);
+			//objDashboard.labelBienvenido.sendKeys(Keys.COMMAND, "t");
+//			Thread.sleep(1000);
+//			tools.setUrl("https://qa.hooly.app/dashboard");
+//			tools.init();
+			Thread.sleep(2000);
+			tools.screenshot("scripts", Caso , "Se ha actualizado la plataforma y se mantiene la sesión Activa");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -146,32 +130,7 @@ public class caso0027_Cambiar_estado_descanso {
 		
 	}
 	
-	@Test (priority = 5)
-	public void cerrarSesion() {
-		try {
-			System.out.println("Se inicia el cierre de sesión");
-			Thread.sleep(300);
-			objCaller.btnSalir.click();
-			tools.screenshot("scripts", Caso , "Salir Llamador");
-			Thread.sleep(200);
-			objDashboard.btnSesion.click();
-			tools.screenshot("scripts", Caso , "Menu Perfil");
-			Thread.sleep(300);
-			objDashboard.btnCerrarSesion.click();
-			tools.screenshot("scripts", Caso , "Cerrando Sesión");
-			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Pantalla de Inicio de Hooly");
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	
-	@Test (priority = 6)
+	@Test (priority = 4)
 	public void cargarEvidencias() {
 		try {
 			

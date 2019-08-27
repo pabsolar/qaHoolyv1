@@ -18,19 +18,20 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
+public class caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
 	
+	String Caso = "caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0023_Acutalizar_Browser_en_pantalla_bienvenido";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0023_Acutalizar_Browser_en_pantalla_bienvenido";
+	
 	
 	boolean continuar = true;
 	
@@ -56,15 +57,15 @@ public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
 	}
 	
 	@Test (priority = 1)
-	public void ingresarRUT() {
+	public void ingresarRUTnoSalesForce() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("Se Ingresa un RUT Registrado");
+			System.out.println("Se Ingresa un RUT no Registrado en Cognito");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys("88755650");
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -86,11 +87,11 @@ public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("David12345.");
-			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
+			objIndex.textPass.sendKeys("Test2019.");
+			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Se ha iniciado Sesión en Hooly");
+			tools.screenshot("scripts", Caso , "Usuario No Registrado en Cognito");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -101,36 +102,9 @@ public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
 		}
 		
 	}
+	
 	
 	@Test (priority = 3)
-	public void validarPagBienvenidos() {
-		objDashboard = new pageDashboard(tools.getDriver());
-		try {
-			System.out.println("Bienvenidos a Hooly");
-			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
-			System.out.println("Se presiona el boton F5 para acutalizar la plataforma");
-			Thread.sleep(200);
-			objDashboard.btnIniciarLlamador.sendKeys(Keys.chord(Keys.SHIFT, Keys.F5));
-			//objDashboard.labelBienvenido.sendKeys(Keys.F5);
-			//objDashboard.labelBienvenido.sendKeys(Keys.COMMAND, "t");
-//			Thread.sleep(1000);
-//			tools.setUrl("https://qa.hooly.app/dashboard");
-//			tools.init();
-			Thread.sleep(2000);
-			tools.screenshot("scripts", Caso , "Se ha actualizado la plataforma y se mantiene la sesión Activa");
-			Thread.sleep(3000);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 4)
 	public void cargarEvidencias() {
 		try {
 			
@@ -179,5 +153,4 @@ public class caso0023_Acutalizar_Browser_en_pantalla_bienvenido {
 		}
 		
 	}
-	
 }

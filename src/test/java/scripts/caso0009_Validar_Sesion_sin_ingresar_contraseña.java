@@ -18,19 +18,19 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0008_Ingresar_sin_Rut {
+public class caso0009_Validar_Sesion_sin_ingresar_contraseña {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	
+	String Caso = "caso0009_Iniciar_Sesion_sin_contraseña";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0008_Ingresar_sin_Rut";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0008_Ingresar_sin_Rut";
+	
 	
 	boolean continuar = true;
 	
@@ -56,18 +56,18 @@ public class caso0008_Ingresar_sin_Rut {
 	}
 	
 	@Test (priority = 1)
-	public void ingresarSinRut() {
+	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
-			System.out.println("No se ingresa el dato solicitado");
+			System.out.println("Se Ingresa un RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.labelBienvenido.click();
+			objIndex.textRut.sendKeys("187884845");
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
-			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Hooly solicita ingresar un valor");
+			objIndex.btnSiguiente_001.click();
+			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
 			Thread.sleep(300);
 			
 		} catch (Exception e) {
@@ -80,6 +80,30 @@ public class caso0008_Ingresar_sin_Rut {
 	}
 	
 	@Test (priority = 2)
+	public void ingresarPASS() {
+		try {
+			System.out.println("Se Ingresa un Contraseña");
+			Thread.sleep(300);
+			objIndex.textPass.click();
+			Thread.sleep(300);
+			objIndex.textPass.sendKeys("");
+			tools.screenshot("scripts", Caso , "No se ingresa Contraseña");
+			objIndex.textPass.sendKeys(Keys.TAB);
+			Thread.sleep(200);
+			tools.screenshot("scripts", Caso , "Ingreso sin Contraseña");
+			Thread.sleep(3000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	
+	@Test (priority = 3)
 	public void cargarEvidencias() {
 		try {
 			

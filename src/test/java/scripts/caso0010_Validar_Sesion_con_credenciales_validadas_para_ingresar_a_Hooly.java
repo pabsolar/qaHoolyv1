@@ -18,19 +18,18 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0024_ {
+public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_Hooly {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	
+	String Caso = "caso0010_Iniciar_Sesion_correctamente";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0010_Iniciar_Sesion_sin_Contraseña";
+	String _class = Caso;
 	String _method = "";
 	
-	String Caso = "caso0010_Iniciar_Sesion_sin_Contraseña";
 	
 	boolean continuar = true;
 	
@@ -59,6 +58,7 @@ public class caso0024_ {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
@@ -81,16 +81,14 @@ public class caso0024_ {
 	@Test (priority = 2)
 	public void ingresarPASS() {
 		try {
-			System.out.println("Se Ingresa un Contraseña");
+			System.out.println("Se Ingresa una Contraseña");
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
 			objIndex.textPass.sendKeys("David12345.");
-			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
+			tools.screenshot("scripts", Caso , "Contraseña Ingresada");
 			objIndex.btnSiguiente_002.click();
-			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Se ha iniciado Sesión en Hooly");
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -106,17 +104,9 @@ public class caso0024_ {
 		objDashboard = new pageDashboard(tools.getDriver());
 		try {
 			System.out.println("Bienvenidos a Hooly");
-			Thread.sleep(1000);
+			Thread.sleep(300);
 			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
-			System.out.println("Se presiona el boton F5 para acutalizar la plataforma");
-			//objDashboard.labelBienvenido.sendKeys(Keys.F5);
-			//objDashboard.labelBienvenido.sendKeys(Keys.COMMAND, "t");
-			Thread.sleep(1000);
-			tools.setUrl("https://qa.hooly.app/dashboard");
-			tools.init();
-			Thread.sleep(2000);
-			tools.screenshot("scripts", Caso , "Se ha actualizado la plataforma y se mantiene la sesión Activa");
-			Thread.sleep(3000);
+			Thread.sleep(1500);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -128,11 +118,51 @@ public class caso0024_ {
 	}
 	
 	@Test (priority = 4)
+	public void cerrarSesion() {
+		objCaller = new pageCaller(tools.getDriver());
+		try {
+			System.out.println("Se inicia el cierre de sesión");
+			Thread.sleep(300);
+			tools.screenshot("scripts", Caso , "Salir Llamador");
+			Thread.sleep(200);
+			objDashboard.btnSesion.click();
+			tools.screenshot("scripts", Caso , "Menu Perfil");
+			Thread.sleep(300);
+			objDashboard.btnCerrarSesion.click();
+			tools.screenshot("scripts", Caso , "Cerrando Sesión");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Pantalla de Inicio de Hooly");
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	
+	@Test (priority = 5)
 	public void cargarEvidencias() {
 		try {
 			
 			System.out.println("Cargando datos a GIT");
-			Thread.sleep(1000);
+			
+			ProcessBuilder processBuilder = new ProcessBuilder();
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
+					" ; git init ; " +
+					" git add . ; " +
+					" git commit -m \"all\" ;" +
+					" git fetch ; " +
+					" git pull --rebase origin master ; " +
+					" git commit -m \"AutoTest\" ; " +
+					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
+					" git push  ; " +
+					" git push origin master ; " +
+					" git push -u origin master");
+			Process p = processBuilder.start();
+			
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;

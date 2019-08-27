@@ -1,6 +1,7 @@
 package scripts;
 
 import java.awt.RenderingHints.Key;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,10 +56,10 @@ public class caso0000_Flujo_Completo {
 	}
 	
 	@Test (priority = 1)
-	public void ingresarRUT() {
+	public void ingresarRUT() throws IOException {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
-			System.out.println("Se Ingresa un RUT no valido");
+			System.out.println("Se Ingresa un RUT valido");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
@@ -80,7 +81,7 @@ public class caso0000_Flujo_Completo {
 	@Test (priority = 2)
 	public void ingresarPASS() {
 		try {
-			System.out.println("Se Ingresa un Contraseña valido");
+			System.out.println("Se Ingresa una Contraseña valido");
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
@@ -106,7 +107,7 @@ public class caso0000_Flujo_Completo {
 		try {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly");
 			System.out.println("Bienvenido a la plataforma Hooly");
-			Thread.sleep(200);
+			Thread.sleep(800);
 			objDashboard.btnIniciarLlamador.click();
 			tools.screenshot("scripts", Caso , "Se ha iniciado el Llamador");
 			Thread.sleep(1000);
@@ -127,9 +128,9 @@ public class caso0000_Flujo_Completo {
 			System.out.println("Se ha conectado la llamada");
 			Thread.sleep(1500);
 			tools.screenshot("scripts", Caso , "Pantalla del Llamador con datos del cliente");
-			System.out.println("Se ha dado un tiempo de 16 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
-			Thread.sleep(1500);
-			System.out.println("Se elimina el elemento emergente de micrófono");
+			System.out.println("Se ha dado un tiempo de 20 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
+			Thread.sleep(2500);
+			//System.out.println("Se elimina el elemento emergente de micrófono");
 			//objCaller.espacioEnHooly.clear();
 			//objCaller.espacioEnHooly.sendKeys(Keys.ESCAPE);
 			tools.screenshot("scripts", Caso , "Pantalla de datos del cliente");
@@ -158,7 +159,7 @@ public class caso0000_Flujo_Completo {
 			System.out.println("Se presiona RE-Enviar SMS");
 			objCaller.btnConfirmarEnvio_001.click();
 			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Se presiona el botón re-enviar Link por sms");
+			tools.screenshot("scripts", Caso , "Se presiona el botón re-enviar/confirmación Link por sms");
 			Thread.sleep(1000);
 			
 		} catch (Exception e) {
@@ -270,9 +271,7 @@ public class caso0000_Flujo_Completo {
 		try {
 			System.out.println("Modificar Datos, Fecha de Nacimiento");
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar FDN Cliente");
-			Thread.sleep(100);
-			//objCaller.textFechaNacimiento.click();
-			//objCaller.textFechaNacimiento.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "13011988");
+			Thread.sleep(300);
 			objCaller.textFechaNacimiento.sendKeys("13011988");
 			tools.screenshot("scripts", Caso , "Se ha modificado la FDN del Cliente");
 			Thread.sleep(200);
@@ -339,7 +338,7 @@ public class caso0000_Flujo_Completo {
 	}
 	
 	@Test (priority = 13)
-	public void modificarDatosClienteTeléfono() {
+	public void modificarDatosClienteTelefono() {
 		try {
 			System.out.println("Modificar Datos, Teléfono");
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar teléfono Cliente");

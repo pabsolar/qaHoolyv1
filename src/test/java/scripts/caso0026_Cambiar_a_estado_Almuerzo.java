@@ -18,7 +18,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0028_ {
+public class caso0026_Cambiar_a_estado_Almuerzo {
 
 	tools tools;
 	pageIndex objIndex;
@@ -27,10 +27,10 @@ public class caso0028_ {
 	
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
-	String _class = "caso0027_Cambiar_estado_descanso";
+	String _class = "caso0026_Cambiar_estado_almuerzo";
 	String _method = "";
 	
-	String Caso = "caso0027_Cambiar_estado_descanso";
+	String Caso = "caso0026_Cambiar_estado_almuerzo";
 	
 	boolean continuar = true;
 	
@@ -59,6 +59,7 @@ public class caso0028_ {
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		try {
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
@@ -131,9 +132,9 @@ public class caso0028_ {
 			Thread.sleep(300);
 			tools.screenshot("scripts", Caso , "Imagen del Llamador Activo");
 			Thread.sleep(200);
-			System.out.println("Se selecciona el estado Descanso");
-			objCaller.btnDescanso.click();
-			tools.screenshot("scripts", Caso , "Ejecutivo en estado Descanso");
+			System.out.println("Se selecciona el estado Almuerzo");
+			objCaller.btnAlmuerzo.click();
+			tools.screenshot("scripts", Caso , "Ejecutivo en estado Almuerzo");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -147,6 +148,8 @@ public class caso0028_ {
 	
 	@Test (priority = 5)
 	public void cerrarSesion() {
+		objDashboard = new pageDashboard(tools.getDriver());
+		objCaller = new pageCaller(tools.getDriver());
 		try {
 			System.out.println("Se inicia el cierre de sesión");
 			Thread.sleep(300);
@@ -175,7 +178,22 @@ public class caso0028_ {
 		try {
 			
 			System.out.println("Cargando datos a GIT");
-			Thread.sleep(1000);
+			
+			ProcessBuilder processBuilder = new ProcessBuilder();
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
+					" ; git init ; " +
+					" git add . ; " +
+					" git commit -m \"all\" ;" +
+					" git fetch ; " +
+					" git pull --rebase origin master ; " +
+					" git commit -m \"AutoTest\" ; " +
+					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
+					" git push  ; " +
+					" git push origin master ; " +
+					" git push -u origin master");
+			Process p = processBuilder.start();
+			
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;

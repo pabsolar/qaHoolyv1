@@ -6,4 +6,31 @@
       <class name="scripts.caso0000_Flujo_Completo"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="scripts.caso0000_Flujo_Completo">
+        <methods>
+          <include name="modificarDatosClienteRUT"/>
+          <include name="enviarMensajeDuranteLlamada"/>
+          <include name="cerrarSesion"/>
+          <include name="modificarDatosClienteAfpActual"/>
+          <include name="modificarDatosClienteNombre"/>
+          <include name="iniciandoLlamada"/>
+          <include name="cerrarBrowser"/>
+          <include name="modificarDatosClienteCorreo"/>
+          <include name="modificarDatosClienteTeléfono"/>
+          <include name="modificarDatosClienteFDN"/>
+          <include name="finalizarLlamada"/>
+          <include name="modificarDatosClienteApeliido"/>
+          <include name="ingresoDashboard"/>
+          <include name="modificarDatoClienteNombre"/>
+          <include name="agregarNota"/>
+          <include name="modificarDatosClienteGenero"/>
+          <include name="guardarDatos"/>
+          <include name="ejecutarBrowser"/>
+          <include name="seleccionDeEstadoCierre"/>
+        </methods>
+      </class> <!-- scripts.caso0000_Flujo_Completo -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
