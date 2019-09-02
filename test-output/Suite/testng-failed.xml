@@ -3,10 +3,9 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test">
     <classes>
-      <class name="scripts.caso0001_Validar_valor_rut_invalido"/>
-      <class name="scripts.caso0002_Rut_no_registrado_SalesForce"/>
-      <class name="scripts.caso0003_Rut_no_registrado_Hooly"/>
-      <class name="scripts.caso0004_Rut_no_registrado_Cognito"/>
+      <class name="scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena"/>
+      <class name="scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly"/>
+      <class name="scripts.caso0006_Rut_registrado_contrasena_no_valida"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Failed suite [Suite] -->
