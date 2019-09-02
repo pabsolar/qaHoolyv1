@@ -63,7 +63,7 @@ public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_est
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("167675689");
+			objIndex.textRut.sendKeys(tools.rutSinPermiso);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +85,7 @@ public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_est
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("Pablo12345.");
+			objIndex.textPass.sendKeys(tools.passSinPermiso);
 			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);

@@ -64,7 +64,7 @@ public class caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys(tools.rutNoHooly);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");

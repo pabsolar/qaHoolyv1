@@ -64,7 +64,7 @@ public class caso0004_Iniciar_Sesion_con_un_RUT_no_registrado_en_Cognito {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("88755650");
+			objIndex.textRut.sendKeys(tools.rutNoCognito);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");

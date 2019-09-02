@@ -61,7 +61,7 @@ public class caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_ch
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("1K2K3K4K");
+			objIndex.textRut.sendKeys(tools.rutHoolyNoValido);
 			tools.screenshot("scripts", Caso , "Ingresar RUT no valido");
 			Thread.sleep(300);
 			

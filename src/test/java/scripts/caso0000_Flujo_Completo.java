@@ -32,6 +32,7 @@ public class caso0000_Flujo_Completo {
 	String _class = Caso;
 	String _method = "";
 	
+	
 	boolean continuar = true;
 	
 	@BeforeTest
@@ -63,7 +64,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("167675689");
+			objIndex.textRut.sendKeys(tools.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +86,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("Pablo12345.");
+			objIndex.textPass.sendKeys(tools.passHoolyOk);
 			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);

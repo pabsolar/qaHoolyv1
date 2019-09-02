@@ -43,8 +43,24 @@ public class tools {
 	private String nombreCarpeta;
 	public String carpetaEvidencia;
 	
+	public String rutHoolyOk = "167675689";
+	public String rutHoolyNoValido = "1k2k3k45k";
+	public String rutNoHooly = "58701483";
+	public String rutNoCognito = "58701483";
+	public String rutNoSalesFroce = "58701483"; 
+	public String rutSinPermiso = "13812407K";
+	
+	public String passHoolyOk = "Pablo12345.";
+	public String passHoolyNo = "Test001.";
+	public String passSinPermiso = "Hooly2019.";
+	
+	public String usuarioSalesforce = "pablo.solar@afpcapital.cl.celulasura";
+	public String passSalesforce = "pabSolar88x!";
+	public String tokenSalesforce = "5pMhJHyXsirKP8aT04W3WuMMB";
+	
+	
 	public tools(){
-		this.url = "https://dev.hoolydev.com/login";
+		this.url = "https://qa.hoolydev.com/login";
 		//this.url = "https://ventasdesarrolloafp.com/inicio";
 		this.browser = "chrome";
 		this.root = "";

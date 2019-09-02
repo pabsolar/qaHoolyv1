@@ -63,7 +63,7 @@ public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys(tools.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +85,7 @@ public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("David12345.");
+			objIndex.textPass.sendKeys(tools.passHoolyOk);
 			tools.screenshot("scripts", Caso , "Contraseña Ingresada");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(1000);

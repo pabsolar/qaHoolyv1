@@ -40,6 +40,25 @@ public class pageIndex {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/button")
     public WebElement btnSiguiente_002;
     
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[1]/div/div/span")
+    public WebElement textPassNueva;
     
-
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[2]/div/div/input")
+    public WebElement textReIngresarPassNueva;
+    
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/button")
+    public WebElement btnSiguiente_003;
+    
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[1]/div/div/input")
+    public WebElement textUsuarioSalesForce;
+    
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[2]/div/div/input")
+    public WebElement textPassSalesForce;
+    
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[3]/div/div/input")
+    public WebElement textTokenSalesForce;
+    
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/button")
+    public WebElement btnSiguiente_004;
+    
 }

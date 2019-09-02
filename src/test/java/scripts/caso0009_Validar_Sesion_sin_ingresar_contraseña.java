@@ -64,7 +64,7 @@ public class caso0009_Validar_Sesion_sin_ingresar_contraseña {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys(tools.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
