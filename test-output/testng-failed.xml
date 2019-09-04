@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
       <class name="scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena"/>
-      <class name="scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly"/>
-      <class name="scripts.caso0006_Rut_registrado_contrasena_no_valida"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test -->
+</suite> <!-- Failed suite [Default suite] -->

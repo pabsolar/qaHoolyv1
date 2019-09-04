@@ -1,73 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="56592" started-at="2019-09-02T19:59:03Z" finished-at="2019-09-02T19:59:59Z">
+  <suite name="Default suite" duration-ms="13862" started-at="2019-09-04T20:46:57Z" finished-at="2019-09-04T20:47:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="56592" started-at="2019-09-02T19:59:03Z" finished-at="2019-09-02T19:59:59Z">
-      <class name="scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly">
-        <test-method status="PASS" signature="ingresarRUTnoHooly()[pri:1, instance:scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly@649d209a]" name="ingresarRUTnoHooly" duration-ms="3582" started-at="2019-09-02T15:59:23Z" finished-at="2019-09-02T15:59:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarRUTnoHooly -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly@649d209a]" name="ingresarPASS" duration-ms="5509" started-at="2019-09-02T15:59:27Z" finished-at="2019-09-02T15:59:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:3, instance:scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly@649d209a]" name="cargarEvidencias" duration-ms="3005" started-at="2019-09-02T15:59:33Z" finished-at="2019-09-02T15:59:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cargarEvidencias -->
-      </class> <!-- scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly -->
-      <class name="scripts.caso0006_Rut_registrado_contrasena_no_valida">
-        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0006_Rut_registrado_contrasena_no_valida@6adca536]" name="ingresarRUT" duration-ms="3496" started-at="2019-09-02T15:59:36Z" finished-at="2019-09-02T15:59:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarRUT -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0006_Rut_registrado_contrasena_no_valida@6adca536]" name="ingresarPASS" duration-ms="5482" started-at="2019-09-02T15:59:39Z" finished-at="2019-09-02T15:59:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:3, instance:scripts.caso0006_Rut_registrado_contrasena_no_valida@6adca536]" name="cargarEvidencias" duration-ms="3005" started-at="2019-09-02T15:59:45Z" finished-at="2019-09-02T15:59:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cargarEvidencias -->
-      </class> <!-- scripts.caso0006_Rut_registrado_contrasena_no_valida -->
+    <test name="Default test" duration-ms="13862" started-at="2019-09-04T20:46:57Z" finished-at="2019-09-04T20:47:11Z">
       <class name="scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@35851384]" name="ejecutarBrowser" is-config="true" duration-ms="5589" started-at="2019-09-02T15:59:03Z" finished-at="2019-09-02T15:59:08Z">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4592" started-at="2019-09-04T16:46:57Z" finished-at="2019-09-04T16:47:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly@649d209a]" name="ejecutarBrowser" is-config="true" duration-ms="4643" started-at="2019-09-02T15:59:08Z" finished-at="2019-09-02T15:59:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0006_Rut_registrado_contrasena_no_valida@6adca536]" name="ejecutarBrowser" is-config="true" duration-ms="4797" started-at="2019-09-02T15:59:13Z" finished-at="2019-09-02T15:59:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@35851384]" name="ingresarRutInvalido" duration-ms="2680" started-at="2019-09-02T15:59:18Z" finished-at="2019-09-02T15:59:20Z">
+        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="2460" started-at="2019-09-04T16:47:01Z" finished-at="2019-09-04T16:47:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarRutInvalido -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@35851384]" name="cargarEvidencias" duration-ms="3005" started-at="2019-09-02T15:59:20Z" finished-at="2019-09-02T15:59:23Z">
+        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="cargarEvidencias" duration-ms="3008" started-at="2019-09-04T16:47:04Z" finished-at="2019-09-04T16:47:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@35851384]" name="cerrarBrowser" is-config="true" duration-ms="3962" started-at="2019-09-02T15:59:48Z" finished-at="2019-09-02T15:59:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cerrarBrowser -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly@649d209a]" name="cerrarBrowser" is-config="true" duration-ms="3907" started-at="2019-09-02T15:59:52Z" finished-at="2019-09-02T15:59:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cerrarBrowser -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0006_Rut_registrado_contrasena_no_valida@6adca536]" name="cerrarBrowser" is-config="true" duration-ms="3913" started-at="2019-09-02T15:59:55Z" finished-at="2019-09-02T15:59:59Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3787" started-at="2019-09-04T16:47:07Z" finished-at="2019-09-04T16:47:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
       </class> <!-- scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -18,13 +18,13 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0011_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas {
+public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas_con_un_usuario_distinto_de_salesforce {
 
 	tools tools;
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
-	String Caso = "caso0011_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas";
+	String Caso = "caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas_con_un_usuario_distinto_de_salesforce";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
 	String _class = Caso;

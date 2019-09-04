@@ -40,7 +40,8 @@ public class pageIndex {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/button")
     public WebElement btnSiguiente_002;
     
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[1]/div/div/span")
+    //Iniciar sesión por primera vez
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[1]/div/div/input")
     public WebElement textPassNueva;
     
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[2]/div/div/input")
@@ -49,16 +50,20 @@ public class pageIndex {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/button")
     public WebElement btnSiguiente_003;
     
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[1]/div/div/input")
+    //Salesforce
+    @FindBy(name = "username")
     public WebElement textUsuarioSalesForce;
     
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[2]/div/div/input")
+    @FindBy(name = "password")
     public WebElement textPassSalesForce;
     
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/div[3]/div/div/input")
+    @FindBy(name = "token")
     public WebElement textTokenSalesForce;
     
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/form/button")
     public WebElement btnSiguiente_004;
     
+    //Iniciar por primera vez
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/button")
+    public WebElement btnAcceder;
 }

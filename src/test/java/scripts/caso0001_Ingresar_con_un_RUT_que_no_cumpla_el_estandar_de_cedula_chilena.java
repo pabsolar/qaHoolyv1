@@ -87,7 +87,7 @@ public class caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_ch
 					" git commit -m \"all\" ;" +
 					" git fetch ; " +
 					" git pull --rebase origin master ; " +
-					" git commit -m \"AutoTest\" ; " +
+					" git commit -m \"all\" ; " +
 					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
 					" git push  ; " +
 					" git push origin master ; " +

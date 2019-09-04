@@ -50,13 +50,21 @@ public class tools {
 	public String rutNoSalesFroce = "58701483"; 
 	public String rutSinPermiso = "13812407K";
 	
+//---------------------------------------------------------------------------------	
+	public String rutModificable = "174329702"; //--- Modificar para el caso 11
+//---------------------------------------------------------------------------------
 	public String passHoolyOk = "Pablo12345.";
 	public String passHoolyNo = "Test001.";
 	public String passSinPermiso = "Hooly2019.";
+	public String passModificable = "Hooly2019.";
 	
 	public String usuarioSalesforce = "pablo.solar@afpcapital.cl.celulasura";
 	public String passSalesforce = "pabSolar88x!";
 	public String tokenSalesforce = "5pMhJHyXsirKP8aT04W3WuMMB";
+//---------------------------------------------------------------------------------	
+	public String selMotivoAbierto = "Abierto";
+	public String nota = "nota test qa 2019";
+	public String Sprint = "Sprint 12";
 	
 	
 	public tools(){
@@ -69,7 +77,7 @@ public class tools {
 		Date date = new Date();
 		DateFormat hourFormat = new SimpleDateFormat("HH-mm-ss");
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-		this.nombreCarpeta = "Prueba Ejecutada el " + dateFormat.format(date) + " " + hourFormat.format(date);
+		this.nombreCarpeta = Sprint + " " + dateFormat.format(date) + " " + hourFormat.format(date);
 	}
 	
 	
