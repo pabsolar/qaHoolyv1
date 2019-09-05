@@ -3,7 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce"/>
+      <class name="scripts.caso0000_Flujo_Completo"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="scripts.caso0000_Flujo_Completo">
+        <methods>
+          <include name="cerrarSesion"/>
+          <include name="cerrarBrowser"/>
+          <include name="ejecutarBrowser"/>
+        </methods>
+      </class> <!-- scripts.caso0000_Flujo_Completo -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
