@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13862" started-at="2019-09-04T20:46:57Z" finished-at="2019-09-04T20:47:11Z">
+  <suite name="Default suite" duration-ms="21212" started-at="2019-09-04T20:51:22Z" finished-at="2019-09-04T20:51:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13862" started-at="2019-09-04T20:46:57Z" finished-at="2019-09-04T20:47:11Z">
-      <class name="scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="4592" started-at="2019-09-04T16:46:57Z" finished-at="2019-09-04T16:47:01Z">
+    <test name="Default test" duration-ms="21212" started-at="2019-09-04T20:51:22Z" finished-at="2019-09-04T20:51:43Z">
+      <class name="scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="5669" started-at="2019-09-04T16:51:22Z" finished-at="2019-09-04T16:51:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRutInvalido()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="ingresarRutInvalido" duration-ms="2460" started-at="2019-09-04T16:47:01Z" finished-at="2019-09-04T16:47:04Z">
+        <test-method status="PASS" signature="ingresarRUTnoSalesForce()[pri:1, instance:scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce@2aaf7cc2]" name="ingresarRUTnoSalesForce" duration-ms="3300" started-at="2019-09-04T16:51:27Z" finished-at="2019-09-04T16:51:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ingresarRutInvalido -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:1, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="cargarEvidencias" duration-ms="3008" started-at="2019-09-04T16:47:04Z" finished-at="2019-09-04T16:47:07Z">
+        </test-method> <!-- ingresarRUTnoSalesForce -->
+        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce@2aaf7cc2]" name="ingresarPASS" duration-ms="5438" started-at="2019-09-04T16:51:31Z" finished-at="2019-09-04T16:51:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ingresarPASS -->
+        <test-method status="PASS" signature="cargarEvidencias()[pri:3, instance:scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce@2aaf7cc2]" name="cargarEvidencias" duration-ms="3008" started-at="2019-09-04T16:51:36Z" finished-at="2019-09-04T16:51:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3787" started-at="2019-09-04T16:47:07Z" finished-at="2019-09-04T16:47:11Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3782" started-at="2019-09-04T16:51:39Z" finished-at="2019-09-04T16:51:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
-      </class> <!-- scripts.caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena -->
+      </class> <!-- scripts.caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

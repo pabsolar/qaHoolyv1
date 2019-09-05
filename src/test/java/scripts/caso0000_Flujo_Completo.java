@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -25,6 +26,7 @@ public class caso0000_Flujo_Completo {
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
 	
 	List<String> errores = new ArrayList<>();
 	String Caso = "caso0000_Flujo_Completo";
@@ -64,7 +66,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutHoolyOk);
+			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -86,7 +88,7 @@ public class caso0000_Flujo_Completo {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys(tools.passHoolyOk);
+			objIndex.textPass.sendKeys(variables.passHoolyOk);
 			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
@@ -131,9 +133,6 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Pantalla del Llamador con datos del cliente");
 			System.out.println("Se ha dado un tiempo de 20 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
 			Thread.sleep(2500);
-			//System.out.println("Se elimina el elemento emergente de micrófono");
-			//objCaller.espacioEnHooly.clear();
-			//objCaller.espacioEnHooly.sendKeys(Keys.ESCAPE);
 			tools.screenshot("scripts", Caso , "Pantalla de datos del cliente");
 			Thread.sleep(5000);
 			
@@ -202,7 +201,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Nombre Cliente");
 			Thread.sleep(100);
 			objCaller.textNombres.click();
-			objCaller.textNombres.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Chernobyl");
+			objCaller.textNombres.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.nombreCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado el Nombre del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -226,7 +225,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Apellido Cliente");
 			Thread.sleep(100);
 			objCaller.textApellidos.click();
-			objCaller.textApellidos.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Quacito");
+			objCaller.textApellidos.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.apellidoCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado el Apellido del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -250,7 +249,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar RUT Cliente");
 			Thread.sleep(100);
 			objCaller.textRUT.click();
-			objCaller.textRUT.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "167675689");
+			objCaller.textRUT.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.rutCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado el RUT del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -273,7 +272,7 @@ public class caso0000_Flujo_Completo {
 			System.out.println("Modificar Datos, Fecha de Nacimiento");
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar FDN Cliente");
 			Thread.sleep(300);
-			objCaller.textFechaNacimiento.sendKeys("13011988");
+			objCaller.textFechaNacimiento.sendKeys(variables.fdnCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado la FDN del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -297,7 +296,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar AFP Actual Cliente");
 			Thread.sleep(100);
 			objCaller.selAFPActual.click();
-			objCaller.selAFPActual.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Capital");
+			objCaller.selAFPActual.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.afpActual);
 			tools.screenshot("scripts", Caso , "Se ha modificado la AFP del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -321,7 +320,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Genero Cliente");
 			Thread.sleep(100);
 			objCaller.selGenero.click();
-			objCaller.selGenero.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "Masculino");
+			objCaller.selGenero.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.generoCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado el Genero del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -345,7 +344,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar teléfono Cliente");
 			Thread.sleep(100);
 			objCaller.textTelefono.click();
-			objCaller.textTelefono.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "934067377");
+			objCaller.textTelefono.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.telefonoCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado el teléfono del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -369,7 +368,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Correo Cliente");
 			Thread.sleep(100);
 			//objCaller.textCorreo.click();
-			objCaller.textCorreo.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "chernobyl@afp.capital");
+			objCaller.textCorreo.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.mailCliente);
 			tools.screenshot("scripts", Caso , "Se ha modificado el correo del Cliente");
 			Thread.sleep(200);
 			objCaller.btnGuardarInfirmacionCliente.click();
@@ -393,7 +392,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Cerrando Lead");
 			Thread.sleep(100);
 			objCaller.selEstado.click();
-			objCaller.selEstado.sendKeys("Contactado");
+			objCaller.selEstado.sendKeys(variables.estadoCierreCliente);
 			Thread.sleep(200);
 			objCaller.selEstado.sendKeys(Keys.TAB);
 			tools.screenshot("scripts", Caso , "Motivo de Cierre, Contactado");
@@ -415,7 +414,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Agregando Nota");
 			Thread.sleep(100);
 			objCaller.textNota.click();
-			objCaller.textNota.sendKeys("Cerrando Lead QA");
+			objCaller.textNota.sendKeys(variables.notaCliente);
 			tools.screenshot("scripts", Caso , "Se ha agreado nota al Cierre");
 			Thread.sleep(500);
 			
@@ -435,7 +434,7 @@ public class caso0000_Flujo_Completo {
 			tools.screenshot("scripts", Caso , "Dashboard Hooly - Modificar Nombre Cliente");
 			Thread.sleep(100);
 			objCaller.textNombres.click();
-			objCaller.textNombres.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "QA Chernobyl");
+			objCaller.textNombres.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), variables.nombreClienteModificado);
 			tools.screenshot("scripts", Caso , "Se ha modificado el Nombre del Cliente");
 			Thread.sleep(500);
 			

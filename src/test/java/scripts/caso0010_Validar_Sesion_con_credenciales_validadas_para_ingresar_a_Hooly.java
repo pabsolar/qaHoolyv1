@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,6 +25,8 @@ public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
+	
 	String Caso = "caso0010_Iniciar_Sesion_correctamente";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
@@ -63,7 +66,7 @@ public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutHoolyOk);
+			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +88,7 @@ public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys(tools.passHoolyOk);
+			objIndex.textPass.sendKeys(variables.passHoolyOk);
 			tools.screenshot("scripts", Caso , "Contraseña Ingresada");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(1000);

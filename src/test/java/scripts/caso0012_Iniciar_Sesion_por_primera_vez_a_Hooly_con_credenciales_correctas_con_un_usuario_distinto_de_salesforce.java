@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,6 +25,8 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
+	
 	String Caso = "caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas_con_un_usuario_distinto_de_salesforce";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
@@ -63,7 +66,7 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutModificable);
+			objIndex.textRut.sendKeys(variables.rutModificable);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +88,7 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys(tools.passModificable);
+			objIndex.textPass.sendKeys(variables.passModificable);
 			tools.screenshot("scripts", Caso , "Contraseña Ingresada");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(1000);
@@ -105,10 +108,10 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 			System.out.println("Se solicita actualizar la contraseña por primera vez");
 			tools.screenshot("scripts", Caso , "Modificar contraseña");
 			Thread.sleep(300);
-			objIndex.textPassNueva.sendKeys(tools.passModificable);
+			objIndex.textPassNueva.sendKeys(variables.passModificable);
 			tools.screenshot("scripts", Caso , "Ingresar contraseña nueva");
 			Thread.sleep(300);
-			objIndex.textReIngresarPassNueva.sendKeys(tools.passModificable);
+			objIndex.textReIngresarPassNueva.sendKeys(variables.passModificable);
 			tools.screenshot("scripts", Caso , "Ingresar contrasña nueva nuevamente");
 			
 			System.out.println("Se guardaran los cambios, presionando Guardar Contraseña");
@@ -130,19 +133,19 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 			System.out.println("Se solicita actualizar los datos de Salesforce - Usuario");
 			tools.screenshot("scripts", Caso , "Actualizar datos Salesforce - Usuario");
 			Thread.sleep(300);
-			objIndex.textUsuarioSalesForce.sendKeys(tools.usuarioSalesforce);
+			objIndex.textUsuarioSalesForce.sendKeys(variables.usuarioSalesforce);
 			tools.screenshot("scripts", Caso , "Usuario SalesForce");
 			Thread.sleep(300);
 			
 			System.out.println("Se solicita actualizar los datos de Salesforce - Contraseña");
 			Thread.sleep(300);
-			objIndex.textPassSalesForce.sendKeys(tools.passSalesforce);
+			objIndex.textPassSalesForce.sendKeys(variables.passSalesforce);
 			tools.screenshot("scripts", Caso , "Contraseña SalesForce");
 			Thread.sleep(300);
 			
 			System.out.println("Se solicita actualizar los datos de Salesforce - Token");
 			Thread.sleep(300);
-			objIndex.textTokenSalesForce.sendKeys(tools.tokenSalesforce);
+			objIndex.textTokenSalesForce.sendKeys(variables.tokenSalesforce);
 			tools.screenshot("scripts", Caso , "Token Salesforce");
 			Thread.sleep(300);
 			
@@ -207,12 +210,12 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 			tools.screenshot("scripts", Caso , "Cerrando Lead");
 			System.out.println("Se asigna el motivo, Abierto");
 			objCaller.selEstado.click();
-			objCaller.selEstado.sendKeys(tools.selMotivoAbierto);
+			objCaller.selEstado.sendKeys(variables.selMotivoAbierto);
 			tools.screenshot("scripts", Caso , "Motivo Almacenado");
 			Thread.sleep(300);
 			
 			System.out.println("Se ingresa una nota");
-			objCaller.textNota.sendKeys(tools.nota);
+			objCaller.textNota.sendKeys(variables.nota);
 			Thread.sleep(200);
 			objCaller.textNota.sendKeys(Keys.TAB);
 			tools.screenshot("scripts", Caso , "Se ingresa una nota");

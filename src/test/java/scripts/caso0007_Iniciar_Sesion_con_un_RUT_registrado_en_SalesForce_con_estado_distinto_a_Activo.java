@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,6 +25,8 @@ public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_est
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
+	
 	String Caso = "caso0007_Rut_distinto_activo";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
@@ -63,7 +66,7 @@ public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_est
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutSinPermiso);
+			objIndex.textRut.sendKeys(variables.rutSinPermiso);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -85,7 +88,7 @@ public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_est
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys(tools.passSinPermiso);
+			objIndex.textPass.sendKeys(variables.passSinPermiso);
 			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);

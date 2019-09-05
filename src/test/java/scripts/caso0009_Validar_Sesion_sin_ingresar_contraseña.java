@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,6 +25,8 @@ public class caso0009_Validar_Sesion_sin_ingresar_contraseña {
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
+	
 	String Caso = "caso0009_Iniciar_Sesion_sin_contraseña";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
@@ -64,7 +67,7 @@ public class caso0009_Validar_Sesion_sin_ingresar_contraseña {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutHoolyOk);
+			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");

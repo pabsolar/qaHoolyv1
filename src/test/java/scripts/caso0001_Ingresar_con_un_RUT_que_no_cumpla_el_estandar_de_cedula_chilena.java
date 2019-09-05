@@ -15,12 +15,14 @@ import org.testng.SkipException;
 
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 
 public class caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena {
 
 	tools tools;
 	pageIndex objIndex;
+	variables variables;
 	String Caso = "caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_chilena";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
@@ -61,7 +63,7 @@ public class caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_ch
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutHoolyNoValido);
+			objIndex.textRut.sendKeys(variables.rutHoolyNoValido);
 			tools.screenshot("scripts", Caso , "Ingresar RUT no valido");
 			Thread.sleep(300);
 			

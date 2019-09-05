@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,6 +25,7 @@ public class caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce {
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
 	
 	String Caso = "caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce";
 	List<String> errores = new ArrayList<>();
@@ -65,7 +67,7 @@ public class caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(tools.rutNoSalesFroce);
+			objIndex.textRut.sendKeys(variables.rutNoSalesFroce);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");

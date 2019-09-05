@@ -26,6 +26,7 @@ import org.testng.SkipException;
 
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
+import Tools.variables;
 
 public class tools {
 	
@@ -36,35 +37,13 @@ public class tools {
 	
 	pageCaller objCaller;
 	pageDashboard objDashboard;
+	variables variables;
 	
 	private WebDriverWait wait;
 	private String root;
 	private int count_screenshot;
 	private String nombreCarpeta;
 	public String carpetaEvidencia;
-	
-	public String rutHoolyOk = "167675689";
-	public String rutHoolyNoValido = "1k2k3k45k";
-	public String rutNoHooly = "58701483";
-	public String rutNoCognito = "58701483";
-	public String rutNoSalesFroce = "58701483"; 
-	public String rutSinPermiso = "13812407K";
-	
-//---------------------------------------------------------------------------------	
-	public String rutModificable = "174329702"; //--- Modificar para el caso 11
-//---------------------------------------------------------------------------------
-	public String passHoolyOk = "Pablo12345.";
-	public String passHoolyNo = "Test001.";
-	public String passSinPermiso = "Hooly2019.";
-	public String passModificable = "Hooly2019.";
-	
-	public String usuarioSalesforce = "pablo.solar@afpcapital.cl.celulasura";
-	public String passSalesforce = "pabSolar88x!";
-	public String tokenSalesforce = "5pMhJHyXsirKP8aT04W3WuMMB";
-//---------------------------------------------------------------------------------	
-	public String selMotivoAbierto = "Abierto";
-	public String nota = "nota test qa 2019";
-	public String Sprint = "Sprint 12";
 	
 	
 	public tools(){
@@ -77,7 +56,7 @@ public class tools {
 		Date date = new Date();
 		DateFormat hourFormat = new SimpleDateFormat("HH-mm-ss");
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-		this.nombreCarpeta = Sprint + " " + dateFormat.format(date) + " " + hourFormat.format(date);
+		this.nombreCarpeta = variables.Sprint + " " + dateFormat.format(date) + " " + hourFormat.format(date);
 	}
 	
 	
