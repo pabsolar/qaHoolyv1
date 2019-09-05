@@ -61,6 +61,7 @@ public class caso0006_Rut_registrado_contrasena_no_valida {
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");

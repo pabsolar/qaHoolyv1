@@ -56,7 +56,7 @@ public class tools {
 		Date date = new Date();
 		DateFormat hourFormat = new SimpleDateFormat("HH-mm-ss");
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-		this.nombreCarpeta = variables.Sprint + " " + dateFormat.format(date) + " " + hourFormat.format(date);
+		this.nombreCarpeta = "test_  " + dateFormat.format(date) + " " + hourFormat.format(date);
 	}
 	
 	

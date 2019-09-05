@@ -60,6 +60,7 @@ public class caso0010_Validar_Sesion_con_credenciales_validadas_para_ingresar_a_
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");

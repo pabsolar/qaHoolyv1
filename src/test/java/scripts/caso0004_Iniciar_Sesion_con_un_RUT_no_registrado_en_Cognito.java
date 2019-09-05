@@ -61,6 +61,7 @@ public class caso0004_Iniciar_Sesion_con_un_RUT_no_registrado_en_Cognito {
 	@Test (priority = 1)
 	public void ingresarRUTnoCognito() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT no Registrado en Cognito");

@@ -28,6 +28,7 @@ public class variables {
 //---------------------------------------------------------------------------------	
 	public String rutModificable = "174329702"; //--- Modificar para el caso 11
 //---------------------------------------------------------------------------------
+	
 	public String passHoolyOk = "Pablo12345.";
 	public String passHoolyNo = "Test001.";
 	public String passSinPermiso = "Hooly2019.";
@@ -36,17 +37,19 @@ public class variables {
 	public String usuarioSalesforce = "pablo.solar@afpcapital.cl.celulasura";
 	public String passSalesforce = "pabSolar88x!";
 	public String tokenSalesforce = "5pMhJHyXsirKP8aT04W3WuMMB";
+	
 //---------------------------------------------------------------------------------	
+	
 	public String selMotivoAbierto = "Abierto";
 	public String nota = "nota test qa 2019";
-	public String Sprint = "Sprint 12";
+	public String Sprint = "Sprint 12 - ";
 	
 //---------------------------------------------------------------------------------		
 
 	public String nombreCliente = "Chernobyl";
 	public String apellidoCliente = "Cuacito";
 	public String rutCliente = "167675689";
-	public String fdnCliente = "130188";
+	public String fdnCliente = "13011988";
 	public String afpActual = "Capital";
 	public String generoCliente = "Masculino";
 	public String telefonoCliente = "934067377";

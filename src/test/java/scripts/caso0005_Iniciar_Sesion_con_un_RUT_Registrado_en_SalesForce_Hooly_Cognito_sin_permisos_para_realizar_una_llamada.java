@@ -60,6 +60,7 @@ public class caso0005_Iniciar_Sesion_con_un_RUT_Registrado_en_SalesForce_Hooly_C
 	@Test (priority = 1)
 	public void ingresarRUT() throws IOException {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			System.out.println("Se Ingresa un RUT valido");
 			Thread.sleep(300);

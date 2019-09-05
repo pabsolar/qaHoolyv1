@@ -61,6 +61,7 @@ public class caso0003_Iniciar_Sesion_con_un_RUT_no_registrado_en_Hooly {
 	@Test (priority = 1)
 	public void ingresarRUTnoHooly() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");

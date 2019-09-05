@@ -57,6 +57,7 @@ public class caso0001_Ingresar_con_un_RUT_que_no_cumpla_el_estandar_de_cedula_ch
 	@Test (priority = 0)
 	public void ingresarRutInvalido() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT no valido");

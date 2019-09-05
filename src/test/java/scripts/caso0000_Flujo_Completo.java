@@ -1,5 +1,11 @@
 package scripts;
 
+import Tools.tools;
+import Tools.variables;
+import pageFactory.pageIndex;
+import pageFactory.pageDashboard;
+import pageFactory.pageCaller;
+
 import java.awt.RenderingHints.Key;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,11 +20,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
-import Tools.tools;
-import Tools.variables;
-import pageFactory.pageIndex;
-import pageFactory.pageDashboard;
-import pageFactory.pageCaller;
 
 public class caso0000_Flujo_Completo {
 
@@ -33,7 +34,6 @@ public class caso0000_Flujo_Completo {
 	String _directory = "scripts";
 	String _class = Caso;
 	String _method = "";
-	
 	
 	boolean continuar = true;
 	
@@ -61,11 +61,12 @@ public class caso0000_Flujo_Completo {
 	@Test (priority = 1)
 	public void ingresarRUT() throws IOException {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			System.out.println("Se Ingresa un RUT valido");
 			Thread.sleep(300);
 			objIndex.textRut.click();
-			Thread.sleep(300);
+			Thread.sleep(1000);
 			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();

@@ -60,6 +60,7 @@ public class caso0012_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_co
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");

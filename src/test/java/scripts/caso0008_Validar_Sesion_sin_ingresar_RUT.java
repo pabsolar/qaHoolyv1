@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,6 +25,7 @@ public class caso0008_Validar_Sesion_sin_ingresar_RUT {
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
 	String Caso = "caso0008_Ingresar_sin_Rut";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
@@ -58,6 +60,7 @@ public class caso0008_Validar_Sesion_sin_ingresar_RUT {
 	@Test (priority = 1)
 	public void ingresarSinRut() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("No se ingresa el dato solicitado");

@@ -61,6 +61,7 @@ public class caso0009_Validar_Sesion_sin_ingresar_contraseña {
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT Registrado");

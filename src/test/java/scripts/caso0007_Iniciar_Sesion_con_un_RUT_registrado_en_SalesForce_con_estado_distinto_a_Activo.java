@@ -61,6 +61,7 @@ public class caso0007_Iniciar_Sesion_con_un_RUT_registrado_en_SalesForce_con_est
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			System.out.println("Se Ingresa un RUT Registrado, pero no esta activo para Hooly");
 			Thread.sleep(300);

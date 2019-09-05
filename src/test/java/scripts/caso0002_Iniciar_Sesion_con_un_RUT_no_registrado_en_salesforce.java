@@ -61,6 +61,7 @@ public class caso0002_Iniciar_Sesion_con_un_RUT_no_registrado_en_salesforce {
 	@Test (priority = 1)
 	public void ingresarRUTnoSalesForce() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa un RUT no Registrado en Cognito");
