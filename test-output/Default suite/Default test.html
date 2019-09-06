@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>19/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 05 14:54:00 CLT 2019</td>
+<td>Started on:</td><td>Fri Sep 06 12:24:31 CLT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>101 seconds (101031 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34415 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,88 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.cerrarBrowser()'><b>cerrarBrowser</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at Tools.tools.stop(tools.java:122)
-	at Tools.tools.skipScript(tools.java:204)
-	at scripts.caso0000_Flujo_Completo.cerrarBrowser(caso0000_Flujo_Completo.java:559)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1012)
-	at org.testng.TestRunner.run(TestRunner.java:636)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace801569151", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace801569151'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at Tools.tools.stop(tools.java:122)
-	at Tools.tools.skipScript(tools.java:204)
-	at scripts.caso0000_Flujo_Completo.cerrarBrowser(caso0000_Flujo_Completo.java:559)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1012)
-	at org.testng.TestRunner.run(TestRunner.java:636)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -157,268 +75,35 @@ Driver info: driver.version: RemoteWebDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='scripts.caso0000_Flujo_Completo.agregarNota()'><b>agregarNota</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
+<td title='scripts.caso0026_Cambiar_a_estado_Almuerzo.cambioEstadoAlmuerzo()'><b>cambioEstadoAlmuerzo</b><br>Test class: scripts.caso0026_Cambiar_a_estado_Almuerzo</td>
 <td></td>
-<td>2</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
+<td>4</td>
+<td>scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2</td></tr>
 <tr>
-<td title='scripts.caso0000_Flujo_Completo.cargarEvidencias()'><b>cargarEvidencias</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
+<td title='scripts.caso0026_Cambiar_a_estado_Almuerzo.cargarEvidencias()'><b>cargarEvidencias</b><br>Test class: scripts.caso0026_Cambiar_a_estado_Almuerzo</td>
 <td></td>
 <td>3</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
+<td>scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2</td></tr>
 <tr>
-<td title='scripts.caso0000_Flujo_Completo.enviarMensajeDuranteLlamada()'><b>enviarMensajeDuranteLlamada</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
+<td title='scripts.caso0026_Cambiar_a_estado_Almuerzo.cerrarSesion()'><b>cerrarSesion</b><br>Test class: scripts.caso0026_Cambiar_a_estado_Almuerzo</td>
 <td></td>
-<td>7</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
+<td>4</td>
+<td>scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2</td></tr>
 <tr>
-<td title='scripts.caso0000_Flujo_Completo.finalizarLlamada()'><b>finalizarLlamada</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>8</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.guardarDatos()'><b>guardarDatos</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>8</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.ingresarPASS()'><b>ingresarPASS</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
+<td title='scripts.caso0026_Cambiar_a_estado_Almuerzo.ingresarPASS()'><b>ingresarPASS</b><br>Test class: scripts.caso0026_Cambiar_a_estado_Almuerzo</td>
 <td></td>
 <td>5</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
+<td>scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2</td></tr>
 <tr>
-<td title='scripts.caso0000_Flujo_Completo.ingresarRUT()'><b>ingresarRUT</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
+<td title='scripts.caso0026_Cambiar_a_estado_Almuerzo.ingresarRUT()'><b>ingresarRUT</b><br>Test class: scripts.caso0026_Cambiar_a_estado_Almuerzo</td>
 <td></td>
 <td>3</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
+<td>scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2</td></tr>
 <tr>
-<td title='scripts.caso0000_Flujo_Completo.ingresoDashboard()'><b>ingresoDashboard</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>3</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.iniciandoLlamada()'><b>iniciandoLlamada</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>10</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatoClienteNombre()'><b>modificarDatoClienteNombre</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>2</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteAfpActual()'><b>modificarDatosClienteAfpActual</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
+<td title='scripts.caso0026_Cambiar_a_estado_Almuerzo.validarPagBienvenidos()'><b>validarPagBienvenidos</b><br>Test class: scripts.caso0026_Cambiar_a_estado_Almuerzo</td>
 <td></td>
 <td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteApeliido()'><b>modificarDatosClienteApeliido</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteCorreo()'><b>modificarDatosClienteCorreo</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteFDN()'><b>modificarDatosClienteFDN</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteGenero()'><b>modificarDatosClienteGenero</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>5</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteNombre()'><b>modificarDatosClienteNombre</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteRUT()'><b>modificarDatosClienteRUT</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.modificarDatosClienteTelefono()'><b>modificarDatosClienteTelefono</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>4</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.seleccionDeEstadoCierre()'><b>seleccionDeEstadoCierre</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td></td>
-<td>3</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='scripts.caso0000_Flujo_Completo.cerrarSesion()'><b>cerrarSesion</b><br>Test class: scripts.caso0000_Flujo_Completo</td>
-<td><div><pre>org.testng.SkipException: 
- =============================================================== 
- Mensaje de Error: contact the automation. 
-    * Exception: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Localized Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Cause: null
-    * fillInStackTrace: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Clase: org.openqa.selenium.NoSuchElementException
-    * Suppressed: [Ljava.lang.Throwable;@222eb8aa
- ===============================================================
-	at Tools.tools.skipScript(tools.java:205)
-	at scripts.caso0000_Flujo_Completo.cerrarSesion(caso0000_Flujo_Completo.java:509)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace154988899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace154988899'><pre>org.testng.SkipException: 
- =============================================================== 
- Mensaje de Error: contact the automation. 
-    * Exception: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Localized Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Cause: null
-    * fillInStackTrace: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;root&quot;]/div/header/button&quot;}
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-de-Pablo.local&apos;, ip: &apos;fe80:0:0:0:812:af57:9f1d:8a65%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/05/t_68wk0d4l9...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:57541}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 76.0.3809.132, webStorageEnabled: true}
-Session ID: fa73efc8130b506bc4af705f73f15399
-*** Element info: {Using=xpath, value=//*[@id=&quot;root&quot;]/div/header/button}
-    * Clase: org.openqa.selenium.NoSuchElementException
-    * Suppressed: [Ljava.lang.Throwable;@222eb8aa
- ===============================================================
-	at Tools.tools.skipScript(tools.java:205)
-	at scripts.caso0000_Flujo_Completo.cerrarSesion(caso0000_Flujo_Completo.java:509)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div></td>
-<td>0</td>
-<td>scripts.caso0000_Flujo_Completo@6e3c1e69</td></tr>
+<td>scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2</td></tr>
 </table><p>
 </body>
 </html>

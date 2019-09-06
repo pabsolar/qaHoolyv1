@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,13 +25,13 @@ public class caso0026_Cambiar_a_estado_Almuerzo {
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
 	
 	List<String> errores = new ArrayList<>();
+	String Caso = "caso0026_Cambiar_a_estado_Almuerzo";
 	String _directory = "scripts";
-	String _class = "caso0026_Cambiar_estado_almuerzo";
+	String _class = Caso;
 	String _method = "";
-	
-	String Caso = "caso0026_Cambiar_estado_almuerzo";
 	
 	boolean continuar = true;
 	
@@ -58,13 +59,14 @@ public class caso0026_Cambiar_a_estado_Almuerzo {
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -86,7 +88,7 @@ public class caso0026_Cambiar_a_estado_Almuerzo {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("David12345.");
+			objIndex.textPass.sendKeys(variables.passHoolyOk);
 			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
@@ -125,7 +127,7 @@ public class caso0026_Cambiar_a_estado_Almuerzo {
 	}
 	
 	@Test (priority = 4)
-	public void cambioEstadoAlmuerzo() {
+	public void cambioEstado() {
 		objCaller = new pageCaller(tools.getDriver());
 		try {
 			System.out.println("Menu de Estados del Ejecutivo");

@@ -19,7 +19,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
+public class caso0014_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas_con_un_token_expirado_de_salesforce {
 
 	tools tools;
 	pageIndex objIndex;
@@ -27,11 +27,12 @@ public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
 	pageCaller objCaller;
 	variables variables;
 	
-	String Caso = "caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5";
+	String Caso = "caso0014_Iniciar_Sesion_por_primera_vez_a_Hooly_con_credenciales_correctas_con_un_token_expirado_de_salesforce";
 	List<String> errores = new ArrayList<>();
 	String _directory = "scripts";
 	String _class = Caso;
 	String _method = "";
+	
 	
 	boolean continuar = true;
 	
@@ -66,7 +67,7 @@ public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys(variables.rutHoolyOk);
+			objIndex.textRut.sendKeys(variables.rutModificable);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -84,16 +85,14 @@ public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
 	@Test (priority = 2)
 	public void ingresarPASS() {
 		try {
-			System.out.println("Se Ingresa un Contraseña");
+			System.out.println("Se Ingresa una Contraseña");
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys(variables.passHoolyOk);
-			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
+			objIndex.textPass.sendKeys(variables.passModificable);
+			tools.screenshot("scripts", Caso , "Contraseña Ingresada");
 			objIndex.btnSiguiente_002.click();
-			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Se ha iniciado Sesión en Hooly");
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -105,23 +104,20 @@ public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
 	}
 	
 	@Test (priority = 3)
-	public void validarPagBienvenidos() {
-		objDashboard = new pageDashboard(tools.getDriver());
+	public void modificarPassPrimeraVez() {
 		try {
-			System.out.println("Bienvenidos a Hooly");
+			System.out.println("Se solicita actualizar la contraseña por primera vez");
+			tools.screenshot("scripts", Caso , "Modificar contraseña");
+			Thread.sleep(300);
+			objIndex.textPassNueva.sendKeys(variables.passModificable);
+			tools.screenshot("scripts", Caso , "Ingresar contraseña nueva");
+			Thread.sleep(300);
+			objIndex.textReIngresarPassNueva.sendKeys(variables.passModificable);
+			tools.screenshot("scripts", Caso , "Ingresar contrasña nueva nuevamente");
+			
+			System.out.println("Se guardaran los cambios, presionando Guardar Contraseña");
+			objIndex.btnSiguiente_003.click();
 			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
-			System.out.println("Se presiona el boton F5 para acutalizar la plataforma");
-			Thread.sleep(200);
-			objDashboard.btnIniciarLlamador.sendKeys(Keys.chord(Keys.SHIFT, Keys.F5));
-			//objDashboard.labelBienvenido.sendKeys(Keys.F5);
-			//objDashboard.labelBienvenido.sendKeys(Keys.COMMAND, "t");
-//			Thread.sleep(1000);
-//			tools.setUrl("https://qa.hooly.app/dashboard");
-//			tools.init();
-			Thread.sleep(2000);
-			tools.screenshot("scripts", Caso , "Se ha actualizado la plataforma y se mantiene la sesión Activa");
-			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -133,6 +129,64 @@ public class caso0023_Actualizar_Pantalla_de_Bienvenidos_a_Hooly_F5 {
 	}
 	
 	@Test (priority = 4)
+	public void actualizarDatosConSalesForce() {
+		try {
+			System.out.println("Se solicita actualizar los datos de Salesforce - Usuario");
+			tools.screenshot("scripts", Caso , "Actualizar datos Salesforce - Usuario");
+			Thread.sleep(300);
+			objIndex.textUsuarioSalesForce.sendKeys(variables.usuarioSalesforce);
+			tools.screenshot("scripts", Caso , "Usuario SalesForce");
+			Thread.sleep(300);
+			
+			System.out.println("Se solicita actualizar los datos de Salesforce - Contraseña");
+			Thread.sleep(300);
+			objIndex.textPassSalesForce.sendKeys(variables.passSalesforce);
+			tools.screenshot("scripts", Caso , "Contraseña SalesForce");
+			Thread.sleep(300);
+			
+			System.out.println("Se solicita actualizar los datos de Salesforce - Token");
+			Thread.sleep(200);
+			System.out.println("Se ingresa un token expirado");
+			Thread.sleep(300);
+			objIndex.textTokenSalesForce.sendKeys(variables.tokenSalesforceAlternativo);
+			tools.screenshot("scripts", Caso , "Token Salesforce incorrecto");
+			Thread.sleep(300);
+			
+			System.out.println("Se guardaran los cambios, presionando Botón Guardar Datos");
+			objIndex.btnSiguiente_004.click();
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	
+	@Test (priority = 5)
+	public void cerrarCaso() {
+		objDashboard = new pageDashboard(tools.getDriver());
+		try {
+			System.out.println("Hooly nos envia un error controlado");
+			Thread.sleep(300);
+			System.out.println("Al validar que no actualiza la cuenta por error en credenciales, se cierra el caso satisfactoriamente");
+			Thread.sleep(300);
+			tools.screenshot("scripts", Caso , "Error controlado al ingresar un token distinto");
+			Thread.sleep(1500);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 6)
 	public void cargarEvidencias() {
 		try {
 			

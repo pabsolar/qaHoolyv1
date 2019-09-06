@@ -1,7 +1,6 @@
 package scripts;
 
 import java.awt.RenderingHints.Key;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +19,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0024_Iniciar_Llamada {
+public class caso0030_Cambiar_a_estado_Ready {
 
 	tools tools;
 	pageIndex objIndex;
@@ -29,7 +28,7 @@ public class caso0024_Iniciar_Llamada {
 	variables variables;
 	
 	List<String> errores = new ArrayList<>();
-	String Caso = "caso0024_Iniciar_Llamada";
+	String Caso = "caso0030_Cambiar_a_estado_Ready";
 	String _directory = "scripts";
 	String _class = Caso;
 	String _method = "";
@@ -58,14 +57,15 @@ public class caso0024_Iniciar_Llamada {
 	}
 	
 	@Test (priority = 1)
-	public void ingresarRUT() throws IOException {
+	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
 		variables = new variables();
 		try {
-			System.out.println("Se Ingresa un RUT valido");
+			tools.screenshot("scripts", Caso , "Hooly Cargado");
+			System.out.println("Se Ingresa RUT Registrado");
 			Thread.sleep(300);
 			objIndex.textRut.click();
-			Thread.sleep(1000);
+			Thread.sleep(300);
 			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
@@ -84,15 +84,15 @@ public class caso0024_Iniciar_Llamada {
 	@Test (priority = 2)
 	public void ingresarPASS() {
 		try {
-			System.out.println("Se Ingresa una Contraseña valido");
+			System.out.println("Se Ingresa Contraseña");
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
 			objIndex.textPass.sendKeys(variables.passHoolyOk);
-			tools.screenshot("scripts", Caso , "Se ingresa Contraseña");
+			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
-			tools.screenshot("scripts", Caso , "Se inicia sesión");
+			tools.screenshot("scripts", Caso , "Se ha iniciado Sesión en Hooly");
 			Thread.sleep(3000);
 			
 		} catch (Exception e) {
@@ -105,15 +105,17 @@ public class caso0024_Iniciar_Llamada {
 	}
 	
 	@Test (priority = 3)
-	public void ingresoDashboard() {
+	public void validarPagBienvenidos() {
 		objDashboard = new pageDashboard(tools.getDriver());
 		try {
-			tools.screenshot("scripts", Caso , "Dashboard Hooly");
-			System.out.println("Bienvenido a la plataforma Hooly");
-			Thread.sleep(800);
-			objDashboard.btnIniciarLlamador.click();
-			tools.screenshot("scripts", Caso , "Se ha iniciado el Llamador");
+			System.out.println("Bienvenidos a Hooly");
 			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Plataforma de Bienvenidos a Hooly");
+			Thread.sleep(2000);
+			System.out.println("Se inicia llamador");
+			objDashboard.btnIniciarLlamador.click();
+			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
+			Thread.sleep(100);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -125,16 +127,17 @@ public class caso0024_Iniciar_Llamada {
 	}
 	
 	@Test (priority = 4)
-	public void iniciandoLlamada() {
+	public void cambioEstado() {
 		objCaller = new pageCaller(tools.getDriver());
 		try {
-			System.out.println("Se ha conectado la llamada");
-			Thread.sleep(1500);
-			tools.screenshot("scripts", Caso , "Pantalla del Llamador con datos del cliente");
-			System.out.println("Se ha dado un tiempo de 20 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
-			Thread.sleep(2500);
-			tools.screenshot("scripts", Caso , "Pantalla de datos del cliente");
-			Thread.sleep(5000);
+			System.out.println("Menu de Estados del Ejecutivo");
+			Thread.sleep(300);
+			tools.screenshot("scripts", Caso , "Imagen del Llamador Activo");
+			Thread.sleep(200);
+			System.out.println("Se selecciona el estado Almuerzo");
+			objCaller.btnAlmuerzo.click();
+			tools.screenshot("scripts", Caso , "Ejecutivo en estado Almuerzo");
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -146,110 +149,22 @@ public class caso0024_Iniciar_Llamada {
 	}
 	
 	@Test (priority = 5)
-	public void finalizarLlamada() {
-		objCaller = new pageCaller(tools.getDriver());
-		try {
-			Thread.sleep(4000);
-			System.out.println("Se finaliza la Llamada");
-			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Se finaliza la llamada");
-			System.out.println("Se presiona Enviar SMS");
-			objCaller.btnFinalizarLlamada.click();
-			Thread.sleep(1000);
-			tools.screenshot("scripts", Caso , "Se ha finalizado la llamada");
-			Thread.sleep(1000);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 6)
-	public void seleccionDeEstadoCierre() {
-		try {
-			System.out.println("Se comienza a Cerrar el Lead");
-			tools.screenshot("scripts", Caso , "Cerrando Lead");
-			Thread.sleep(100);
-			objCaller.selEstado.click();
-			objCaller.selEstado.sendKeys(variables.estadoCierreCliente);
-			Thread.sleep(200);
-			objCaller.selEstado.sendKeys(Keys.TAB);
-			tools.screenshot("scripts", Caso , "Motivo de Cierre, Contactado");
-			Thread.sleep(1000);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 7)
-	public void agregarNota() {
-		try {
-			System.out.println("Agregar Nota al Cierre del Lead");
-			tools.screenshot("scripts", Caso , "Agregando Nota");
-			Thread.sleep(100);
-			objCaller.textNota.click();
-			objCaller.textNota.sendKeys(variables.notaCliente);
-			tools.screenshot("scripts", Caso , "Se ha agreado nota al Cierre");
-			Thread.sleep(500);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 8)
-	public void guardarDatos() {
-		try {
-			System.out.println("Se cierra el lead");
-			tools.screenshot("scripts", Caso , "Cerrando Lead");
-			Thread.sleep(300);
-			objCaller.btnGuardarDatos.click();
-			tools.screenshot("scripts", Caso , "Lead Cerrado");
-			Thread.sleep(1000);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 9)
 	public void cerrarSesion() {
+		objDashboard = new pageDashboard(tools.getDriver());
+		objCaller = new pageCaller(tools.getDriver());
 		try {
 			System.out.println("Se inicia el cierre de sesión");
 			Thread.sleep(300);
 			objCaller.btnSalir.click();
 			tools.screenshot("scripts", Caso , "Salir Llamador");
-			
-			System.out.println("Se presiona le menu del perfil ejecutivo");
 			Thread.sleep(200);
 			objDashboard.btnSesion.click();
 			tools.screenshot("scripts", Caso , "Menu Perfil");
 			Thread.sleep(300);
-			
-			System.out.println("Se cierra Sesión");
 			objDashboard.btnCerrarSesion.click();
 			tools.screenshot("scripts", Caso , "Cerrando Sesión");
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			tools.screenshot("scripts", Caso , "Pantalla de Inicio de Hooly");
-			Thread.sleep(200);
-			
 		} catch (Exception e) {
 			continuar = false;
 			tools.skipScript(e);
@@ -259,7 +174,8 @@ public class caso0024_Iniciar_Llamada {
 		
 	}
 	
-	@Test (priority = 10)
+	
+	@Test (priority = 6)
 	public void cargarEvidencias() {
 		try {
 			

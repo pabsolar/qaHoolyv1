@@ -26,7 +26,7 @@ public class variables {
 	public String rutSinPermiso = "13812407K";
 	
 //---------------------------------------------------------------------------------	
-	public String rutModificable = "174329702"; //--- Modificar para el caso 11
+	public String rutModificable = "174329702"; //--- Eliminar en Cognito para ejecutar
 //---------------------------------------------------------------------------------
 	
 	public String passHoolyOk = "Pablo12345.";
@@ -37,6 +37,10 @@ public class variables {
 	public String usuarioSalesforce = "pablo.solar@afpcapital.cl.celulasura";
 	public String passSalesforce = "pabSolar88x!";
 	public String tokenSalesforce = "5pMhJHyXsirKP8aT04W3WuMMB";
+	
+	public String usuarioSalesfroceAlternativo = "pablo.solar@afpcapital.cl.celulasur";
+	public String passSalesforceAlternativo = "123123123";
+	public String tokenSalesforceAlternativo = "123123123";
 	
 //---------------------------------------------------------------------------------	
 	
