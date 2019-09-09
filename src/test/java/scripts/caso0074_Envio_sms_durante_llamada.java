@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
 
 import Tools.tools;
+import Tools.variables;
 import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
@@ -24,13 +25,13 @@ public class caso0074_Envio_sms_durante_llamada {
 	pageIndex objIndex;
 	pageDashboard objDashboard;
 	pageCaller objCaller;
+	variables variables;
 	
 	List<String> errores = new ArrayList<>();
-	String _directory = "scripts";
-	String _class = "caso0074_Envio_sms_durante_llamada";
-	String _method = "";
-	
 	String Caso = "caso0074_Envio_sms_durante_llamada";
+	String _directory = "scripts";
+	String _class = Caso;
+	String _method = "";
 	
 	boolean continuar = true;
 	
@@ -64,7 +65,7 @@ public class caso0074_Envio_sms_durante_llamada {
 			Thread.sleep(300);
 			objIndex.textRut.click();
 			Thread.sleep(300);
-			objIndex.textRut.sendKeys("187884845");
+			objIndex.textRut.sendKeys(variables.rutHoolyOk);
 			tools.screenshot("scripts", Caso , "Ingreso de RUT Válido");
 			objIndex.btnSiguiente_001.click();
 			tools.screenshot("scripts", Caso , "Hooly solicita contraseña");
@@ -86,7 +87,7 @@ public class caso0074_Envio_sms_durante_llamada {
 			Thread.sleep(300);
 			objIndex.textPass.click();
 			Thread.sleep(300);
-			objIndex.textPass.sendKeys("David12345.");
+			objIndex.textPass.sendKeys(variables.passHoolyOk);
 			tools.screenshot("scripts", Caso , "Se ha ingresado una contraseña");
 			objIndex.btnSiguiente_002.click();
 			Thread.sleep(200);
@@ -163,7 +164,7 @@ public class caso0074_Envio_sms_durante_llamada {
 			objCaller.btnFinalizarLlamada.click();
 			tools.screenshot("scripts", Caso , "Se cancela la llamada");
 			System.out.println("Se selecciona la opción Abierto");
-			objCaller.selEstado.sendKeys("Abierto");
+			objCaller.selEstado.sendKeys(variables.estadoCierreCliente);
 			tools.screenshot("scripts", Caso , "Se selecciona la opción Abierto, no se ingresan notas");
 			Thread.sleep(300);
 			System.out.println("Se cierra el Lead");
@@ -210,7 +211,22 @@ public class caso0074_Envio_sms_durante_llamada {
 		try {
 			
 			System.out.println("Cargando datos a GIT");
-			Thread.sleep(1000);
+			
+			ProcessBuilder processBuilder = new ProcessBuilder();
+			processBuilder.command("bash", "-c", "cd " + System.getProperty("user.dir")+"/evidencia/" + 
+					" ; git init ; " +
+					" git add . ; " +
+					" git commit -m \"all\" ;" +
+					" git fetch ; " +
+					" git pull --rebase origin master ; " +
+					" git commit -m \"AutoTest\" ; " +
+					" git remote add origin https://github.com/AFP-Capital/hooly-evidencia.git ; " +
+					" git push  ; " +
+					" git push origin master ; " +
+					" git push -u origin master");
+			Process p = processBuilder.start();
+			
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;

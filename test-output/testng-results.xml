@@ -1,45 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34415" started-at="2019-09-06T16:24:31Z" finished-at="2019-09-06T16:25:05Z">
+  <suite name="Default suite" duration-ms="365249" started-at="2019-09-09T16:56:06Z" finished-at="2019-09-09T17:02:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34415" started-at="2019-09-06T16:24:31Z" finished-at="2019-09-06T16:25:05Z">
-      <class name="scripts.caso0026_Cambiar_a_estado_Almuerzo">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="ejecutarBrowser" is-config="true" duration-ms="5062" started-at="2019-09-06T12:24:31Z" finished-at="2019-09-06T12:24:36Z">
+    <test name="Default test" duration-ms="365249" started-at="2019-09-09T16:56:06Z" finished-at="2019-09-09T17:02:11Z">
+      <class name="scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="ejecutarBrowser" is-config="true" duration-ms="4617" started-at="2019-09-09T13:56:06Z" finished-at="2019-09-09T13:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="ingresarRUT" duration-ms="3152" started-at="2019-09-06T12:24:36Z" finished-at="2019-09-06T12:24:39Z">
+        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="ingresarRUT" duration-ms="3179" started-at="2019-09-09T13:56:11Z" finished-at="2019-09-09T13:56:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarRUT -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="ingresarPASS" duration-ms="5324" started-at="2019-09-06T12:24:39Z" finished-at="2019-09-06T12:24:44Z">
+        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="ingresarPASS" duration-ms="5401" started-at="2019-09-09T13:56:14Z" finished-at="2019-09-09T13:56:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="validarPagBienvenidos()[pri:3, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="validarPagBienvenidos" duration-ms="4528" started-at="2019-09-06T12:24:44Z" finished-at="2019-09-06T12:24:49Z">
+        <test-method status="PASS" signature="validarPagBienvenidos()[pri:3, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="validarPagBienvenidos" duration-ms="4557" started-at="2019-09-09T13:56:19Z" finished-at="2019-09-09T13:56:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validarPagBienvenidos -->
-        <test-method status="PASS" signature="cambioEstadoAlmuerzo()[pri:4, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="cambioEstadoAlmuerzo" duration-ms="4927" started-at="2019-09-06T12:24:49Z" finished-at="2019-09-06T12:24:54Z">
+        <test-method status="PASS" signature="cambioEstado()[pri:4, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cambioEstado" duration-ms="4937" started-at="2019-09-09T13:56:24Z" finished-at="2019-09-09T13:56:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cambioEstadoAlmuerzo -->
-        <test-method status="PASS" signature="cerrarSesion()[pri:5, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="cerrarSesion" duration-ms="4637" started-at="2019-09-06T12:24:54Z" finished-at="2019-09-06T12:24:58Z">
+        </test-method> <!-- cambioEstado -->
+        <test-method status="PASS" signature="volverReady()[pri:5, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="volverReady" duration-ms="303769" started-at="2019-09-09T13:56:29Z" finished-at="2019-09-09T14:01:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- volverReady -->
+        <test-method status="PASS" signature="iniciandoLlamada()[pri:6, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="iniciandoLlamada" duration-ms="10399" started-at="2019-09-09T14:01:33Z" finished-at="2019-09-09T14:01:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iniciandoLlamada -->
+        <test-method status="PASS" signature="finalizarLlamada()[pri:7, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="finalizarLlamada" duration-ms="8502" started-at="2019-09-09T14:01:43Z" finished-at="2019-09-09T14:01:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizarLlamada -->
+        <test-method status="PASS" signature="seleccionDeEstadoCierre()[pri:8, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="seleccionDeEstadoCierre" duration-ms="3380" started-at="2019-09-09T14:01:51Z" finished-at="2019-09-09T14:01:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seleccionDeEstadoCierre -->
+        <test-method status="PASS" signature="agregarNota()[pri:9, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="agregarNota" duration-ms="2162" started-at="2019-09-09T14:01:55Z" finished-at="2019-09-09T14:01:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- agregarNota -->
+        <test-method status="PASS" signature="guardarDatos()[pri:10, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="guardarDatos" duration-ms="2762" started-at="2019-09-09T14:01:57Z" finished-at="2019-09-09T14:02:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- guardarDatos -->
+        <test-method status="PASS" signature="cerrarSesion()[pri:11, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cerrarSesion" duration-ms="4705" started-at="2019-09-09T14:02:00Z" finished-at="2019-09-09T14:02:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarSesion -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:6, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="cargarEvidencias" duration-ms="3007" started-at="2019-09-06T12:24:58Z" finished-at="2019-09-06T12:25:01Z">
+        <test-method status="PASS" signature="cargarEvidencias()[pri:12, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cargarEvidencias" duration-ms="3006" started-at="2019-09-09T14:02:04Z" finished-at="2019-09-09T14:02:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0026_Cambiar_a_estado_Almuerzo@2aaf7cc2]" name="cerrarBrowser" is-config="true" duration-ms="3759" started-at="2019-09-06T12:25:01Z" finished-at="2019-09-06T12:25:05Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cerrarBrowser" is-config="true" duration-ms="3844" started-at="2019-09-09T14:02:07Z" finished-at="2019-09-09T14:02:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
-      </class> <!-- scripts.caso0026_Cambiar_a_estado_Almuerzo -->
+      </class> <!-- scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -19,7 +19,7 @@ import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 
-public class caso0059_Actualizar_AFP_durante_llamada {
+public class caso0047_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_120_minutos {
 
 	tools tools;
 	pageIndex objIndex;
@@ -28,7 +28,7 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	variables variables;
 	
 	List<String> errores = new ArrayList<>();
-	String Caso = "caso0059_Actualizar_AFP_durante_llamada";
+	String Caso = "caso0047_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_120_minutos";
 	String _directory = "scripts";
 	String _class = Caso;
 	String _method = "";
@@ -59,6 +59,7 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	@Test (priority = 1)
 	public void ingresarRUT() {
 		objIndex = new pageIndex(tools.getDriver());
+		variables = new variables();
 		try {
 			tools.screenshot("scripts", Caso , "Hooly Cargado");
 			System.out.println("Se Ingresa RUT Registrado");
@@ -114,8 +115,7 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 			System.out.println("Se inicia llamador");
 			objDashboard.btnIniciarLlamador.click();
 			tools.screenshot("scripts", Caso , "Se ha iniciado llamada mediante Hooly");
-			Thread.sleep(7000);
-			tools.screenshot("scripts", Caso , "Llamada Activa");
+			Thread.sleep(100);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -127,19 +127,17 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	}
 	
 	@Test (priority = 4)
-	public void actualizarAFP() {
+	public void cambioEstado() {
 		objCaller = new pageCaller(tools.getDriver());
 		try {
-			System.out.println("Datos del Cliente");
-			tools.screenshot("scripts", Caso , "Llamada Activa");
-			Thread.sleep(200);
-			objCaller.selAFPActual.sendKeys(variables.afpActual);
-			tools.screenshot("scripts", Caso , "AFP Modificada");
-			Thread.sleep(100);
-			objCaller.btnGuardarInfirmacionCliente.click();
-			Thread.sleep(750);
-			tools.screenshot("scripts", Caso , "Mensaje de Guardar Datos");
+			System.out.println("Menu de Estados del Ejecutivo");
 			Thread.sleep(300);
+			tools.screenshot("scripts", Caso , "Imagen del Llamador Activo");
+			Thread.sleep(200);
+			System.out.println("Se selecciona el estado Almuerzo");
+			objCaller.btnAlmuerzo.click();
+			tools.screenshot("scripts", Caso , "Ejecutivo en estado Almuerzo");
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -151,40 +149,15 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	}
 	
 	@Test (priority = 5)
-	public void cancelarLlamada() {
+	public void volverReady() {
 		objCaller = new pageCaller(tools.getDriver());
 		try {
-			System.out.println("Se cancela la llamada");
-			tools.screenshot("scripts", Caso , "Se cancela la llamada");
-			Thread.sleep(200);
-			objCaller.btnFinalizarLlamada.click();
-			tools.screenshot("scripts", Caso , "Llamada Cancelada");
-			Thread.sleep(1000);
-			
-		} catch (Exception e) {
-			continuar = false;
-			tools.skipScript(e);
-			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
-			tools.stop();
-		}
-		
-	}
-	
-	@Test (priority = 5)
-	public void cerrarLead() {
-		try {
-			System.out.println("Se inicia el cierre del Lead");
-			Thread.sleep(300);
-			objCaller.selEstado.sendKeys(variables.estadoCierreCliente);
-			Thread.sleep(300);
-			tools.screenshot("scripts", Caso , "Se actualiza el estado de cierre");
-			objCaller.textNota.sendKeys(variables.notaCliente);
-			Thread.sleep(750);
-			tools.screenshot("scripts", Caso , "Se ingresa una nota del lead");
-			System.out.println("Se cierra el Lead");
-			objCaller.btnGuardarDatos.click();
-			tools.screenshot("scripts", Caso , "Se cierra el Lead");
-			Thread.sleep(2000);
+			System.out.println("Volver a estado Ready");
+			Thread.sleep(7200000);
+			System.out.println("Se cambia a estado Ready");
+			objCaller.btnReady.click();
+			tools.screenshot("scripts", Caso , "Estado Modificado");
+			Thread.sleep(3000);
 			
 		} catch (Exception e) {
 			continuar = false;
@@ -196,7 +169,113 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	}
 	
 	@Test (priority = 6)
+	public void iniciandoLlamada() {
+		objCaller = new pageCaller(tools.getDriver());
+		try {
+			System.out.println("Se ha conectado la llamada");
+			Thread.sleep(1500);
+			tools.screenshot("scripts", Caso , "Pantalla del Llamador con datos del cliente");
+			System.out.println("Se ha dado un tiempo de 10 segundos para esta prueba, se finalizara la llamada transcurrido el tiempo mencionado");
+			Thread.sleep(2500);
+			tools.screenshot("scripts", Caso , "Pantalla de datos del cliente");
+			Thread.sleep(5000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 7)
+	public void finalizarLlamada() {
+		objCaller = new pageCaller(tools.getDriver());
+		try {
+			Thread.sleep(4000);
+			System.out.println("Se finaliza la Llamada");
+			Thread.sleep(1000);
+			objCaller.btnFinalizarLlamada.click();
+			tools.screenshot("scripts", Caso , "Se finaliza la llamada");
+			Thread.sleep(1000);
+			tools.screenshot("scripts", Caso , "Se ha finalizado la llamada");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 8)
+	public void seleccionDeEstadoCierre() {
+		try {
+			System.out.println("Se comienza a Cerrar el Lead");
+			tools.screenshot("scripts", Caso , "Cerrando Lead");
+			Thread.sleep(100);
+			objCaller.selEstado.click();
+			objCaller.selEstado.sendKeys(variables.estadoCierreCliente);
+			Thread.sleep(200);
+			objCaller.selEstado.sendKeys(Keys.TAB);
+			tools.screenshot("scripts", Caso , "Motivo de Cierre, Contactado");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 9)
+	public void agregarNota() {
+		try {
+			System.out.println("Agregar Nota al Cierre del Lead");
+			tools.screenshot("scripts", Caso , "Agregando Nota");
+			Thread.sleep(100);
+			objCaller.textNota.click();
+			objCaller.textNota.sendKeys(variables.notaCliente);
+			tools.screenshot("scripts", Caso , "Se ha agreado nota al Cierre");
+			Thread.sleep(500);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 10)
+	public void guardarDatos() {
+		try {
+			System.out.println("Se cierra el lead");
+			tools.screenshot("scripts", Caso , "Cerrando Lead");
+			Thread.sleep(300);
+			objCaller.btnGuardarDatos.click();
+			tools.screenshot("scripts", Caso , "Lead Cerrado");
+			Thread.sleep(1000);
+			
+		} catch (Exception e) {
+			continuar = false;
+			tools.skipScript(e);
+			System.out.println("El paso " + _method + "no ha podido ser ejecutado satisfactoriamente, se detiene el script");
+			tools.stop();
+		}
+		
+	}
+	
+	@Test (priority = 11)
 	public void cerrarSesion() {
+		objDashboard = new pageDashboard(tools.getDriver());
+		objCaller = new pageCaller(tools.getDriver());
 		try {
 			System.out.println("Se inicia el cierre de sesión");
 			Thread.sleep(300);
@@ -220,7 +299,7 @@ public class caso0059_Actualizar_AFP_durante_llamada {
 	}
 	
 	
-	@Test (priority = 7)
+	@Test (priority = 12)
 	public void cargarEvidencias() {
 		try {
 			

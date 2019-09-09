@@ -3,7 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="scripts.caso0026_Cambiar_a_estado_Almuerzo"/>
+      <class name="scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->
