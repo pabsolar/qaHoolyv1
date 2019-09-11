@@ -1,69 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="12" passed="12">
+<testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="365249" started-at="2019-09-09T16:56:06Z" finished-at="2019-09-09T17:02:11Z">
+  <suite name="Default suite" duration-ms="53465" started-at="2019-09-10T17:48:10Z" finished-at="2019-09-10T17:49:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="365249" started-at="2019-09-09T16:56:06Z" finished-at="2019-09-09T17:02:11Z">
-      <class name="scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos">
-        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="ejecutarBrowser" is-config="true" duration-ms="4617" started-at="2019-09-09T13:56:06Z" finished-at="2019-09-09T13:56:11Z">
+    <test name="Default test" duration-ms="53465" started-at="2019-09-10T17:48:10Z" finished-at="2019-09-10T17:49:04Z">
+      <class name="scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto">
+        <test-method status="PASS" signature="ejecutarBrowser()[pri:0, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="ejecutarBrowser" is-config="true" duration-ms="4552" started-at="2019-09-10T14:48:10Z" finished-at="2019-09-10T14:48:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ejecutarBrowser -->
-        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="ingresarRUT" duration-ms="3179" started-at="2019-09-09T13:56:11Z" finished-at="2019-09-09T13:56:14Z">
+        <test-method status="PASS" signature="ingresarRUT()[pri:1, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="ingresarRUT" duration-ms="3234" started-at="2019-09-10T14:48:15Z" finished-at="2019-09-10T14:48:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarRUT -->
-        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="ingresarPASS" duration-ms="5401" started-at="2019-09-09T13:56:14Z" finished-at="2019-09-09T13:56:19Z">
+        <test-method status="PASS" signature="ingresarPASS()[pri:2, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="ingresarPASS" duration-ms="5390" started-at="2019-09-10T14:48:18Z" finished-at="2019-09-10T14:48:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ingresarPASS -->
-        <test-method status="PASS" signature="validarPagBienvenidos()[pri:3, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="validarPagBienvenidos" duration-ms="4557" started-at="2019-09-09T13:56:19Z" finished-at="2019-09-09T13:56:24Z">
+        <test-method status="PASS" signature="ingresoDashboard()[pri:3, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="ingresoDashboard" duration-ms="3254" started-at="2019-09-10T14:48:24Z" finished-at="2019-09-10T14:48:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validarPagBienvenidos -->
-        <test-method status="PASS" signature="cambioEstado()[pri:4, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cambioEstado" duration-ms="4937" started-at="2019-09-09T13:56:24Z" finished-at="2019-09-09T13:56:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cambioEstado -->
-        <test-method status="PASS" signature="volverReady()[pri:5, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="volverReady" duration-ms="303769" started-at="2019-09-09T13:56:29Z" finished-at="2019-09-09T14:01:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- volverReady -->
-        <test-method status="PASS" signature="iniciandoLlamada()[pri:6, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="iniciandoLlamada" duration-ms="10399" started-at="2019-09-09T14:01:33Z" finished-at="2019-09-09T14:01:43Z">
+        </test-method> <!-- ingresoDashboard -->
+        <test-method status="PASS" signature="iniciandoLlamada()[pri:4, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="iniciandoLlamada" duration-ms="8418" started-at="2019-09-10T14:48:27Z" finished-at="2019-09-10T14:48:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciandoLlamada -->
-        <test-method status="PASS" signature="finalizarLlamada()[pri:7, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="finalizarLlamada" duration-ms="8502" started-at="2019-09-09T14:01:43Z" finished-at="2019-09-09T14:01:51Z">
+        <test-method status="PASS" signature="finalizarLlamada()[pri:5, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="finalizarLlamada" duration-ms="2771" started-at="2019-09-10T14:48:35Z" finished-at="2019-09-10T14:48:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizarLlamada -->
-        <test-method status="PASS" signature="seleccionDeEstadoCierre()[pri:8, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="seleccionDeEstadoCierre" duration-ms="3380" started-at="2019-09-09T14:01:51Z" finished-at="2019-09-09T14:01:55Z">
+        <test-method status="PASS" signature="modificarDatosClienteRUT()[pri:6, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="modificarDatosClienteRUT" duration-ms="4683" started-at="2019-09-10T14:48:38Z" finished-at="2019-09-10T14:48:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modificarDatosClienteRUT -->
+        <test-method status="PASS" signature="seleccionDeEstadoCierre()[pri:7, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="seleccionDeEstadoCierre" duration-ms="3401" started-at="2019-09-10T14:48:43Z" finished-at="2019-09-10T14:48:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seleccionDeEstadoCierre -->
-        <test-method status="PASS" signature="agregarNota()[pri:9, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="agregarNota" duration-ms="2162" started-at="2019-09-09T14:01:55Z" finished-at="2019-09-09T14:01:57Z">
+        <test-method status="PASS" signature="agregarNota()[pri:8, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="agregarNota" duration-ms="2168" started-at="2019-09-10T14:48:46Z" finished-at="2019-09-10T14:48:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- agregarNota -->
-        <test-method status="PASS" signature="guardarDatos()[pri:10, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="guardarDatos" duration-ms="2762" started-at="2019-09-09T14:01:57Z" finished-at="2019-09-09T14:02:00Z">
+        <test-method status="PASS" signature="guardarDatos()[pri:9, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="guardarDatos" duration-ms="2772" started-at="2019-09-10T14:48:48Z" finished-at="2019-09-10T14:48:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- guardarDatos -->
-        <test-method status="PASS" signature="cerrarSesion()[pri:11, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cerrarSesion" duration-ms="4705" started-at="2019-09-09T14:02:00Z" finished-at="2019-09-09T14:02:04Z">
+        <test-method status="PASS" signature="cerrarSesion()[pri:10, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="cerrarSesion" duration-ms="5958" started-at="2019-09-10T14:48:51Z" finished-at="2019-09-10T14:48:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarSesion -->
-        <test-method status="PASS" signature="cargarEvidencias()[pri:12, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cargarEvidencias" duration-ms="3006" started-at="2019-09-09T14:02:04Z" finished-at="2019-09-09T14:02:07Z">
+        <test-method status="PASS" signature="cargarEvidencias()[pri:11, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="cargarEvidencias" duration-ms="3011" started-at="2019-09-10T14:48:57Z" finished-at="2019-09-10T14:49:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cargarEvidencias -->
-        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos@6e3c1e69]" name="cerrarBrowser" is-config="true" duration-ms="3844" started-at="2019-09-09T14:02:07Z" finished-at="2019-09-09T14:02:11Z">
+        <test-method status="PASS" signature="cerrarBrowser()[pri:0, instance:scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto@6e3c1e69]" name="cerrarBrowser" is-config="true" duration-ms="3830" started-at="2019-09-10T14:49:00Z" finished-at="2019-09-10T14:49:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cerrarBrowser -->
-      </class> <!-- scripts.caso0031_Cambiar_de_estado_Almuerzo_a_Ready_despues_de_5_minutos -->
+      </class> <!-- scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

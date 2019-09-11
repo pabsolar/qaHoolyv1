@@ -61,5 +61,32 @@ public class variables {
 	public String estadoCierreCliente = "Abierto";
 	public String notaCliente = "Nota Test QA 2019";
 	public String nombreClienteModificado = "Chernobyl QA";
+
+//---------------------------------------------------------------------------------		
+
+	public String nombreClienteFormatoDistinto = "123123123";
+	public String apellidoClienteFormatoDistinto = "Cuacito";
+	public String rutClienteFormatoDistinto = "167675689";
+	public String fdnClienteFormatoDistinto = "13011988";
+	public String afpActualFormatoDistinto = "Capital";
+	public String generoClienteFormatoDistinto = "Masculino";
+	public String telefonoClienteFormatoDistinto = "934067377";
+	public String mailClienteFormatoDistinto = "test@test.cl";
+	public String estadoCierreClienteFormatoDistinto = "Abierto";
+	public String notaClienteFormatoDistinto = "Nota Test QA 2019";
+	public String nombreClienteModificadoFormatoDistinto = "Chernobyl QA";
 	
+//---------------------------------------------------------------------------------		
+
+		public String nombreClienteCampoVacio = "";
+		public String apellidoClienteCampoVacio = "";
+		public String rutClienteCampoVacio = "";
+		public String fdnClienteCampoVacio = "";
+		public String afpActualCampoVacio = "Selecciona";
+		public String generoClienteCampoVacio = "Selecciona";
+		public String telefonoClienteCampoVacio = "";
+		public String mailClienteCampoVacio = "";
+		public String estadoCierreClienteCampoVacio = "";
+		public String notaClienteCampoVacio = "";
+		public String nombreClienteModificadoCampoVacio = "";
 }
