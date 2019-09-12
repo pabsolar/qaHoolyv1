@@ -96,6 +96,9 @@ public class pageCaller {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div[3]/div/div/section[2]/div/button[2]")
     public WebElement btnCancelarContinuarSinGuardar;
     
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[1]/div/form/div/button")
+    public WebElement btnGuardarDatos2;
+    
     
     //Información del Cliente
     

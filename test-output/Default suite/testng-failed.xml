@@ -3,7 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="scripts.caso0082_Actualizar_RUT_de_cliente_formato_incorrecto"/>
+      <class name="scripts.caso0108_Seleccionar_estado_Cerrado_motivo_AFP_Licitada_sin_ingresar_nota_y_guardar"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="scripts.caso0108_Seleccionar_estado_Cerrado_motivo_AFP_Licitada_sin_ingresar_nota_y_guardar">
+        <methods>
+          <include name="guardarDatos"/>
+          <include name="ejecutarBrowser"/>
+          <include name="agregarNota"/>
+          <include name="cerrarSesion"/>
+          <include name="cerrarBrowser"/>
+        </methods>
+      </class> <!-- scripts.caso0108_Seleccionar_estado_Cerrado_motivo_AFP_Licitada_sin_ingresar_nota_y_guardar -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

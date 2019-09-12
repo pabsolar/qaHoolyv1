@@ -78,15 +78,41 @@ public class variables {
 	
 //---------------------------------------------------------------------------------		
 
-		public String nombreClienteCampoVacio = "";
-		public String apellidoClienteCampoVacio = "";
-		public String rutClienteCampoVacio = "";
-		public String fdnClienteCampoVacio = "";
-		public String afpActualCampoVacio = "Selecciona";
-		public String generoClienteCampoVacio = "Selecciona";
-		public String telefonoClienteCampoVacio = "";
-		public String mailClienteCampoVacio = "";
-		public String estadoCierreClienteCampoVacio = "";
-		public String notaClienteCampoVacio = "";
-		public String nombreClienteModificadoCampoVacio = "";
+	public String nombreClienteCampoVacio = "";
+	public String apellidoClienteCampoVacio = "";
+	public String rutClienteCampoVacio = "";
+	public String fdnClienteCampoVacio = "";
+	public String afpActualCampoVacio = "Selecciona";
+	public String generoClienteCampoVacio = "Selecciona";
+	public String telefonoClienteCampoVacio = "";
+	public String mailClienteCampoVacio = "";
+	public String estadoCierreClienteCampoVacio = "";
+	public String notaClienteCampoVacio = "";
+	public String nombreClienteModificadoCampoVacio = "";
+		
+//----------------------------------------------------------------------------------
+	public String estadoAbierto = "Abierto";
+	public String estadoContactado = "Contactado";
+	public String estadoNoContactado = "No Contactado";
+	public String estadoCerrado = "Cerrado";
+	public String estadoCalificado = "Calificado";
+	
+	public String cierreVacio = "Selecciona";
+	public String cierreAFPLicitada = "AFP licitada";
+	public String cierreClienteAFPCapital = "Cliente AFP Capital";
+	public String cierreDuplicado = "Duplicado";
+	public String cierreNoAfiliado = "No afiliado";
+	public String cierreNoContactado = "No contactado";
+	public String cierreOtroIdioma = "Otro idioma";
+	public String cierrePensionado = "Pensionado";
+	public String cierreNoInteresado = "No interesado";
+
+	public String calificadoVacio = "Selecciona";
+	public String calificadoGanado = "Ganado";
+	public String calificadoAgendarVisita = "Agendar Visita";
+	public String calificadoPerdido = "Perdido";
+	
+	public String rutLeadCerrado = "";
+	public String rutLeadCalificado = "199935143";
+	
 }

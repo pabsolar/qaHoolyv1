@@ -5,9 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+
 //Fecha
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +25,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
+import pageFactory.pageIndex;
 import pageFactory.pageDashboard;
 import pageFactory.pageCaller;
 import Tools.variables;
@@ -35,16 +41,26 @@ public class tools {
 	private WebDriver driver;
 	private JavascriptExecutor executor;
 	
+	pageIndex objIndex;
 	pageCaller objCaller;
 	pageDashboard objDashboard;
 	variables variables;
+	tools tools;
+	
+	List<String> errores = new ArrayList<>();
+	
+	String _directory = "scripts";
+	String _method = "";
+	
+	boolean continuar = true;
+	
 	
 	private WebDriverWait wait;
 	private String root;
 	private int count_screenshot;
 	private String nombreCarpeta;
 	public String carpetaEvidencia;
-	
+	public String Caso;
 	
 	public tools(){
 		this.url = "https://qa.hoolydev.com/login";
@@ -88,11 +104,6 @@ public class tools {
 		}
 	}
 	
-//	public static void main(String a[]) {
-//		System.out.println(System.getProperty("user.dir") + "/chromedirver");
-//	}
-
-	
 	/* Initializer */
 	public WebDriver init() throws MalformedURLException {
 		switch(this.browser) {
@@ -121,8 +132,7 @@ public class tools {
 		if(this.driver != null) {
 			this.driver.close();
 			this.driver.quit();
-//			this.driver = null;
-//			executor.executeScript("alert('Ejecución terminada.')");
+			
 		}
 	}
 	
@@ -148,9 +158,6 @@ public class tools {
 		
 		this.count_screenshot++;
 	}
-	
-
-	
 	
 	/* WebElement tools*/
 	public void click(WebElement element){
@@ -191,7 +198,6 @@ public class tools {
     	return element;
 	}
 	
-	
 	/* Result skip */
 	public void skipPreviousMethod() {
 		throw new SkipException("\n" +
@@ -228,5 +234,4 @@ public class tools {
 		message += " =============================================================== \n";
 		Assert.assertTrue(false, message);
 	}
-	
 }
